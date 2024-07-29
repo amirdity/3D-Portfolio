@@ -1,3 +1,4 @@
+
 import {
   mobile,
   backend,
@@ -24,8 +25,11 @@ import {
   tripguide,
   threejs,
 } from "../assets";
-
-export const navLinks = [
+type NavLinks = {
+  id: string;
+  title: string;
+}
+export const navLinks: NavLinks[] = [
   {
     id: "about",
     title: "About",
