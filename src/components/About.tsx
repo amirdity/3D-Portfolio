@@ -7,7 +7,7 @@ import { Tilt } from "react-tilt";
 
 const ServiceCard = ({ index, title, icon }: any) => {
   return (
-    <Tilt className="xs:w-[250px] w-full">
+    <div className="xs:w-[250px] w-full">
       <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
@@ -31,7 +31,7 @@ const ServiceCard = ({ index, title, icon }: any) => {
           </h3>
         </div>
       </motion.div>
-    </Tilt>
+    </div>
   );
 };
 const About = () => {
