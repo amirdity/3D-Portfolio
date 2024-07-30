@@ -2203,6 +2203,11 @@ three-stdlib@^2.29.9:
     fflate "^0.6.9"
     potpack "^1.0.1"
 
+three@^0.167.0:
+  version "0.167.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.167.0.tgz#399ae7b69604c0a45b93ba3706ad8dc962056c42"
+  integrity sha512-9Y1a66fpjqF3rhq7ivKTaKtjQLZ97Hj/lZ00DmZWaKHaQFH4uzYT1znwRDWQOcgMmCcOloQzo61gDmqO8l9xmA==
+
 to-regex-range@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/to-regex-range/-/to-regex-range-5.0.1.tgz#1648c44aae7c8d988a326018ed72f5b4dd0392e4"
