@@ -1,79 +1,48 @@
-import { useState } from "react";
-import { styles } from "../styles.ts";
-import { Link } from "react-router-dom";
-import { close, logo, menu } from "../assets";
-import { navLinks } from "../constants/index.ts";
-const Navbar = () => {
-  // tailwind responsive will work after for example after sm do this
-  const [active, setActive] = useState<string>("");
-  const [toggle, setToggle] = useState<boolean>(false);
+
+// this is for icons
+import { BiHomeAlt, BiUser } from "react-icons/bi";
+import { BsBriefcase } from "react-icons/bs";
+import { Link } from "react-scroll";
+
+const Nav = () => {
   return (
-    <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-5 z-20 bg-primary`}
-    >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            window.scrollTo(0, 0);
-            setActive("");
-          }}
-        >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            {" "}
-            Amir &nbsp; Fattahi &nbsp;
-            <span className="sm:block hidden">
-              &nbsp; | &nbsp; react &nbsp; && &nbsp; next
-            </span>
-          </p>
-        </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((link) => (
-            <li
-              key={link.id}
-              className={` ${
-                active === link.title ? "text-white" : "text-secondary"
-              } text-white hover:text-headingColor duration-300`}
-            >
-              <a href={`#${link.id}`}>{link.title}</a>
-            </li>
-          ))}
-        </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
-            onClick={() => setToggle(!toggle)}
-          />
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+    <nav className="fixed bottom-2 lg:bottom-8 w-full overflow-hidden z-50 ">
+      <div className="container mx-auto">
+        {/**inner nav we have some icons */}
+        <div className="w-full  bg-black/5 h-[80px] backdrop-blur-2xl rounded-full max-w-[400px] mx-auto px-5 flex text-2xl text-white/50  justify-around items-center">
+          <Link
+            to="home"
+            activeClass="active"
+            smooth={true}
+            spy={true}
+            offset={-200}
+            className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center  "
           >
-            <ul className="list-none flex sm:flex justify-end flex-col items-start gap-4">
-              {navLinks.map((link) => (
-                <li
-                  key={link.id}
-                  className={` ${
-                    active === link.title ? "text-white" : "text-secondary"
-                  } text-white hover:text-headingColor duration-300 font-poppins font-medium cursor-pointer text-[16px]`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(link.title);
-                  }}
-                >
-                  <a href={`#${link.id}`}>{link.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+            <BiHomeAlt />
+          </Link>
+          <Link
+            to="about"
+            activeClass="active"
+            smooth={true}
+            spy={true}
+            className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center  "
+          >
+            <BiUser />
+          </Link>
+
+          <Link
+            to="work"
+            activeClass="active"
+            smooth={true}
+            spy={true}
+            className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center  "
+          >
+            <BsBriefcase />
+          </Link>
         </div>
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+export default Nav;
