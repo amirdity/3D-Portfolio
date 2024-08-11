@@ -1,36 +1,17 @@
-import { BrowserRouter } from "react-router-dom";
-import {
-  About,
-  Contact,
-  Experience,
-  Feedbacks,
-  Hero,
-  Navbar,
-  StarsCanvas,
-  Tech,
-  Works,
-} from "./components";
-
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
+import Homepage from "./Homepage";
+import GoalTypeScript from "./components/Projects/Goal-typescript/GoalTypeScript";
+const route = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" >
+      <Route index element={<Homepage />} />
+      <Route path="*" element={<Homepage />} />
+      <Route path="/goal-typescript" element={<GoalTypeScript />} />
+    </Route>
+  )
+)
 function App() {
-  return (
-    <BrowserRouter>
-      <div className="relateive z-0 bg-primary ">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <Navbar />
-          <Hero />
-        </div>
-        <About />
-        {/* <Experience /> */}
-        <Tech />
-        <Works />
-        <Feedbacks />
-        <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div>
-      </div>
-    </BrowserRouter>
-  );
+  return <RouterProvider router={route}/>;
 }
 
 export default App;

@@ -1,28 +1,29 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  mode: "jit",
   theme: {
+    fontFamily: {
+      primary: "Orbitron",
+      secondary: "Rajdhani",
+      tertiary: "Aldrich",
+    },
     extend: {
       colors: {
-        primary: "#050816",
-        secondary: "#aaa6c3",
-        tertiary: "#151030",
-        most:"#915eff",
-        "black-100": "#100d25",
-        "black-200": "#090325",
-        "white-100": "#f3f3f3",
-      },
-      boxShadow: {
-        card: "0px 35px 120px -15px #211e35",
-      },
-      screens: {
-        xs: "450px",
+        primary: "#0a0a0a",
+        accent: "#B809C3",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/herobg.png')",
+        site: "url('./assets/site-bg.webp')",
+        about: "url('./assets/about.webp')",
       },
+    },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "960px",
+      xl: "1200px",
     },
   },
   plugins: [],
 };
+
