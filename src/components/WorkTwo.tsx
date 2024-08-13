@@ -1,5 +1,5 @@
 import image from "../assets/MyProj/last-cv.webp";
-import image3 from "../assets/MyProj/jingil.webp";
+import image3 from "../assets/MyProj/timer-sypescript.webp";
 import image4 from "../assets/MyProj/goal-typescript.webp";
 import { motion } from "framer-motion";
 import { fadeIn } from "../varients";
@@ -17,7 +17,7 @@ const WorkTwo = () => {
             className="flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0"
           >
             {/**text */}
-            <a href="https://jingil-nextjs.vercel.app/">
+            <Link to="/timer-typescript">
               {" "}
               <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
                 {/**over lay */}
@@ -29,14 +29,14 @@ const WorkTwo = () => {
                 />
                 {/**pretty */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50   ">
-                  <span className="text-gradient">"SHOP ➡ (TURN VPN ON )"</span>{" "}
+                  <span className="text-gradient">"Timer"</span>{" "}
                 </div>
                 {/**title */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                  <span className="text-3xl text-white">NEXTJS TAILWIND</span>
+                  <span className="text-3xl text-white">React Context</span>
                 </div>
               </div>
-            </a>
+            </Link>
             {/**image */}
 
             <Link to="/goal-typescript">

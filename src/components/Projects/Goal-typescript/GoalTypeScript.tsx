@@ -4,7 +4,7 @@ import goalsImg from "./assets/goals.webp";
 import { useState } from "react";
 import CourseGoalList from "./components/CourseGoalList";
 import NewGoal from "./components/NewGoal";
-import "./index.css"
+import "./index.css";
 import "animate.css";
 export type CourseGoal = {
   title: string;
