@@ -69,7 +69,7 @@ const WorkTwo = () => {
           >
             {/**image */}
 
-            <a href="https://jingil-nextjs.vercel.app/">
+            <Link to="/chartbar-expense-typescript">
               {" "}
               <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
                 {/**over lay */}
@@ -81,14 +81,14 @@ const WorkTwo = () => {
                 />
                 {/**pretty */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50   ">
-                  <span className="text-gradient">"SHOP ➡ (TURN VPN ON )"</span>{" "}
+                  <span className="text-gradient">"chartbar-expense-typescript"</span>{" "}
                 </div>
                 {/**title */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                  <span className="text-3xl text-white">NEXTJS TAILWIND</span>
+                  <span className="text-3xl text-white">REACT TYPESCRIPT</span>
                 </div>
               </div>
-            </a>
+            </Link>
 
             <a href="https://amirfattahi.ir/last-cv/index.html">
               {" "}
