@@ -1,16 +1,12 @@
-
-
-import { Expense } from '../../App';
+import { Expense } from '../../ChartbarExpenseTypescript';
 import ExpenseItem from './ExpenseItem';
 type Props = {
   items:Expense[]
 }
-
 const ExpensesList = (props: Props) => {
   if (props.items.length === 0) {
     return <h2 className='expenses-list__fallback'>Found no expenses.</h2>;
   }
-
   return (
     <ul className='expenses-list'>
       {props.items.map((expense) => (

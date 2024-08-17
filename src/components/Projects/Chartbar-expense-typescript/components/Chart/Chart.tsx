@@ -1,5 +1,3 @@
-
-
 import ChartBar from './ChartBar';
 type Props = {
   dataPoints:  {
@@ -7,11 +5,9 @@ type Props = {
     value: number;
   }[]
 }
-
 const Chart = (props: Props) => {
   const dataPointValues = props.dataPoints.map(dataPoint => dataPoint.value);
   const totalMaximum = Math.max(...dataPointValues);
-
   return (
     <div className='chart'>
       {props.dataPoints.map((dataPoint) => (

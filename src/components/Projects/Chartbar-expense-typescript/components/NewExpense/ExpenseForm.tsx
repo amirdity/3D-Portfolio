@@ -1,10 +1,8 @@
 import React, { FormEvent, useState } from 'react';
-
 type ExpenseForm = {
   onSaveExpenseData: (arg0: { title: string; amount: string; date: Date; id: string }) => void
   onCancel?: React.MouseEventHandler<HTMLButtonElement>;
 }
-
 const ExpenseForm = (props: ExpenseForm) => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');

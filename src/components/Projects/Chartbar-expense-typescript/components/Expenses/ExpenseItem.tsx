@@ -1,14 +1,10 @@
-
-
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
 interface Props {
   title: string
   date: Date
-
   amount: number
 }
-
 const ExpenseItem = (props: Props) => {
   return (
     <li>

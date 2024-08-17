@@ -1,6 +1,4 @@
-
-
-import { Expense } from '../../App';
+import { Expense } from '../../ChartbarExpenseTypescript';
 import Chart from '../Chart/Chart';
 type Props = {
   expenses: Expense[]
@@ -20,12 +18,10 @@ const ExpensesChart = (props: Props) => {
     { label: 'Nov', value: 0 },
     { label: 'Dec', value: 0 },
   ];
-
   for (const expense of props.expenses) {
     const expenseMonth = expense.date.getMonth(); // starting at 0 => January => 0
     chartDataPoints[expenseMonth].value += expense.amount;
   }
-
   return <Chart dataPoints={chartDataPoints} />;
 };
 

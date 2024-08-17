@@ -10,8 +10,6 @@ export type Expense = {
   date: Date;
 }
 const DUMMY_EXPENSES: Expense[] = expenses
-
-
 const App = () => {
   const [expenses, setExpenses] = useState<Expense[]>(DUMMY_EXPENSES);
   const addExpenseHandler = (expense: Expense): void => {

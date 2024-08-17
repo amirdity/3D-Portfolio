@@ -1,5 +1,4 @@
 import {type ChangeEvent } from "react";
-
 type Props = {
   selected: string;
   onChangeFilter: (value: string) => void;
@@ -8,7 +7,6 @@ const ExpensesFilter = (props: Props) => {
   const dropdownChangeHandler = (event: ChangeEvent<HTMLSelectElement>) => {
     props.onChangeFilter(event.target.value);
   };
-
   return (
     <div className='expenses-filter'>
       <div className='expenses-filter__control'>

@@ -6,7 +6,6 @@ interface Expense {
   amount: number;
   date: Date;
 }
-
 interface EXXX {
   id: string;
   title: string;
@@ -18,7 +17,6 @@ type OnAddExpense = {
 }
 const NewExpense = (props: OnAddExpense) => {
   const [isEditing, setIsEditing] = useState(false);
-
   const saveExpenseDataHandler = (enteredExpenseData: Expense) => {
     const expenseData = {
       ...enteredExpenseData,
@@ -27,15 +25,12 @@ const NewExpense = (props: OnAddExpense) => {
     props.onAddExpense(expenseData);
     setIsEditing(false);
   };
-
   const startEditingHandler = (): void => {
     setIsEditing(true);
   };
-
   const stopEditingHandler = (): void => {
     setIsEditing(false);
   };
-
   return (
     <div className='new-expense'>
       {!isEditing && (
