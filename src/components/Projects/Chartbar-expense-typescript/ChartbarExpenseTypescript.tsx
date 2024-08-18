@@ -18,7 +18,7 @@ const ChartbarExpenseTypescript = () => {
     });
   };
   return (
-    <div className='expenses-typescript'>
+    <div className='expenses-typescript text-black'>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
