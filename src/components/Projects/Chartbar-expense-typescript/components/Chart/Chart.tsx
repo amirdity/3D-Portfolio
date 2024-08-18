@@ -1,15 +1,28 @@
-import ChartBar from './ChartBar';
+import styled from "styled-components";
+import ChartBar from "./ChartBar";
 type Props = {
-  dataPoints:  {
+  dataPoints: {
     label: string;
     value: number;
-  }[]
-}
+  }[];
+};
+const StyledChart = styled.div.attrs<{ varient: "outline" }>((props) => ({
+  type: "button",
+  varient: props.varient
+}))`
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: ${(props) => props.varient === "outline" ? "#f8dfff" : "blue"};
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  height: 10rem;
+`
 const Chart = (props: Props) => {
-  const dataPointValues = props.dataPoints.map(dataPoint => dataPoint.value);
+  const dataPointValues = props.dataPoints.map((dataPoint) => dataPoint.value);
   const totalMaximum = Math.max(...dataPointValues);
   return (
-    <div className='chart'>
+    <StyledChart varient="outline">
       {props.dataPoints.map((dataPoint) => (
         <ChartBar
           key={dataPoint.label}
@@ -18,7 +31,7 @@ const Chart = (props: Props) => {
           label={dataPoint.label}
         />
       ))}
-    </div>
+    </StyledChart>
   );
 };
 
