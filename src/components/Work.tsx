@@ -20,7 +20,7 @@ const Work = () => {
               <h2 className="h2 leading-tight text-accent">
                 my latest <br /> work
               </h2>
-              <p className="max-w-sm  mb-16    "></p>
+              <p className="max-w-sm  mb-[85px]    "></p>
               <button className="btn btn-sm cursor-none">
                 See all projects
               </button>
