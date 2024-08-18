@@ -1,3 +1,4 @@
+// import classes from "../../style/Glich.module.css"
 
 import logo from "../../assets/logo-header.svg";
 import classes from "./Header.module.css"
@@ -18,7 +19,10 @@ const Header = () => {
           <button
             className={`${classes.btn} h-[48px] px-6 text-xl cursor-none rounded-3xl`}
           >
+            <div className={classes.glitch} data-glitch="My Portfolio">
+
             My Portfolio
+            </div>
           </button>
         </div>
       </div>

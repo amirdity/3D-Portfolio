@@ -7,7 +7,6 @@ import telegram from "../assets/social/telegram.png";
 import gmail from "../assets/social/gmail.png";
 import instagram from "../assets/social/instagram.png";
 import github from "../assets/social/github.png";
-
 const Banner = () => {
   return (
     <section
@@ -23,11 +22,16 @@ const Banner = () => {
             viewport={{ once: false, amount: 0.7 }}
             className="text-[55px] font-bold leading-[0.8] lg:text-[110px]"
           >
-            AMIR{" "}
-            <span>
-              {" "}
-              FA<span className="text-accent">TT</span>AHI
-            </span>
+           
+              <div >
+                AMIR
+                <span>
+
+                  FA<span className="text-accent">TT</span>AHI
+                </span>
+              </div>
+           
+
           </motion.h1>
           <motion.div
             variants={fadeIn("up", 0.4)}
@@ -70,7 +74,7 @@ const Banner = () => {
             viewport={{ once: false, amount: 0.7 }}
             className="flex text-[20px] gap-x-6 max-w-max mx-auto   "
           >
-            {}
+            { }
             <motion.a
               href="https://www.linkedin.com/in/amir-fattahi77/"
               target="_blank"

@@ -1,5 +1,6 @@
 import image from "../assets/MyProj/last-cv.webp";
-import image3 from "../assets/MyProj/timer-sypescript.webp";
+import image3 from "../assets/MyProj/Expense-chart.webp";
+import Timer from "../assets/MyProj/timer-sypescript.webp"
 import image4 from "../assets/MyProj/goal-typescript.webp";
 import { motion } from "framer-motion";
 import { fadeIn } from "../varients";
@@ -23,7 +24,7 @@ const WorkTwo = () => {
                 {/**over lay */}
                 <div className="group-hover:bg-black/50 w-full h-full absolute z-40 transition-all duration-300"></div>
                 <img
-                  src={image3}
+                  src={Timer}
                   alt="last cv"
                   className="group-hover:scale-125 transition-all duration-500"
                 />
@@ -81,11 +82,11 @@ const WorkTwo = () => {
                 />
                 {/**pretty */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50   ">
-                  <span className="text-gradient">"chartbar-expense-typescript"</span>{" "}
+                  <span className="text-gradient">"Expense Chart"</span>{" "}
                 </div>
                 {/**title */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                  <span className="text-3xl text-white">REACT TYPESCRIPT</span>
+                  <span className="text-3xl text-white">STYLED-COMPONENTS TYPESCRIPT</span>
                 </div>
               </div>
             </Link>
