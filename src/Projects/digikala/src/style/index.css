@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* IRANYEKN FONTS */
+
+@font-face {
+  font-family: Iranyekan-light;
+  src: url("../font/Qs_Iranyekan\ light.ttf");
+}
+@font-face {
+  font-family: Iranyekan-black;
+  src: url("../font/Qs_Iranyekan\ black.ttf");
+}
+@font-face {
+  font-family: Iranyekan-bold;
+  src: url("../font/Qs_Iranyekan\ bold.ttf");
+}
+@font-face {
+  font-family: Iranyekan-extrablack;
+  src: url("../font/Qs_Iranyekan\ extrablack.ttf");
+}
+@font-face {
+  font-family: Iranyekan-extrabold;
+  src: url("../font/Qs_Iranyekan\ extrabold.ttf");
+}
+@font-face {
+  font-family: Iranyekan-medium;
+  src: url("../font/Qs_Iranyekan\ medium.ttf");
+}
+@font-face {
+  font-family: Iranyekan-thin;
+  src: url("../font/Qs_Iranyekan\ thin.ttf");
+}
+@font-face {
+  font-family: IRANYekan;
+  src: url("../font/Qs_Iranyekan.ttf");
+}
+* {
+  font-family: IRANYekan, sans-serif;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+.text-mobile-search {
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 5px;
+  
+}
+:root {
+  --font-family: IRANYekan, sans-serif;
+  --spacing-base: 4px;
+  --global-radius: 8px;
+  --small-radius: 4px;
+  --medium-radius: 8px;
+  --medium-plus-radius: 12px;
+  --large-radius: 16px;
+}
+/* animations */
+.mobileSearchAnimation {
+  animation: showMobile .3s ease;
+}
+.hideMobileSearchAnimation {
+  animation: hideMobile .3s ease forwards;
+}
+.textSubtitleStrong {
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 2;
+  color: #3f4064;
+}
+@keyframes showMobile {
+  from {
+    top: 400px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes hideMobile {
+  from {
+    top: 0px;
+    opacity: 1;
+  }
+  to {
+    top: 700px;
+    opacity: 0;
+  }
+}

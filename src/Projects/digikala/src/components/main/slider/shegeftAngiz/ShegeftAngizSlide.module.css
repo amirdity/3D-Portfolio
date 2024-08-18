@@ -1,0 +1,47 @@
+ .shgeftAngiz {
+   background: linear-gradient(225deg, #d22c4e, #ee384e 41.68%, #ef5662);
+
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   line-clamp: 2;
+   line-height: 2;
+   /* overflow: hidden; */
+   font-size: 12px;
+
+ }
+
+ /* .shgeftAngiz div{
+  background: transparent;
+}  */
+ .shgeftAngiz .swiper-wrapper,
+ .shgeftAngiz .swiper-slide-active,
+ .shgeftAngiz .swiper-slide,
+ .shgeftAngiz .swiper-container,
+ .shgeftAngiz .swiper-container-horizontal,
+ .shgeftAngiz .swiper-container-rtl,
+ .shgeftAngiz .swiper-container-pointer-events,
+ .shgeftAngiz .swiper-container-free-mode,
+ .shgeftAngiz .swiper-container-initialized,
+ .shgeftAngiz .swiper,
+ .shgeftAngiz .swiper,
+ .shgeftAngiz .swiper-initialized,
+ .shgeftAngiz .swiper-horizontal,
+ .shgeftAngiz .swiper-rtl {
+   /* background: linear-gradient(225deg, #d22c4e, #ee384e 41.68%, #ef5662); */
+ }
+
+ .firstSlide {
+   background: linear-gradient(225deg, #d22c4e, #ee384e 41.68%, #ef5662);
+ }
+
+ /* .swiper-slide div{
+  background: white !important
+} 
+.swiper-slide-next div{
+  background-color: white !important
+} */
+ /* swiper-slide 
+swiper-slide-active
+swiper-wrapper */
+ /* swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-free-mode swiper-container-rtl */
