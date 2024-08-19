@@ -1,25 +1,8 @@
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider,
-} from "react-router-dom";
-import Layout from "./layout/Layout.tsx";
 import Homepage from "./components/main/Homepage.tsx";
-import "./style/index.css"
-// const route = createBrowserRouter(
-//   createRoutesFromElements(
-//     <Route path="/" element={<Layout />}>
-//       <Route index element={<Homepage/>} />
-//     </Route>
-//   )
-// );
+import "./style/index.css";
+
 function Digikala() {
-  return (
-    <Homepage/>
-    // <RouterProvider router={route} />
-  
-  );
+  return <Homepage />;
 }
 
 export default Digikala;

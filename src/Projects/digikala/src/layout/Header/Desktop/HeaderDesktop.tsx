@@ -1,8 +1,8 @@
 import HeaderNavbar from "../../../components/header/HeaderNavbar";
 import MegaMenu from "../../../components/header/MegaMenu";
-// import { Button } from "../../../stories/Button";
 import Search from "./Search";
 import logo from "../../../../public/asset/header/digikala-logo-asli.svg";
+import { Button } from "../../../../../../stories/Button";
 export default function HeaderDesktop() {
   return (
     <header className="w-full flex flex-col border-b-gray-300 border-b-[1px] mx-auto">
@@ -26,7 +26,7 @@ export default function HeaderDesktop() {
           <Search />
         </div>
         <div className="flex flex-row my-auto h-[45px] gap-x-5 text-[12px] font-[700]">
-          {/* <Button
+          <Button
             alignContent="center"
             alignItems="center"
             backgroundColor="#ffffff"
@@ -42,11 +42,10 @@ export default function HeaderDesktop() {
             onClick={() => {}}
             padding="10px 15px"
             primary
-            size="large"
+            size="small"
             width={135}
-            fontFamily="IRANYekan"
-            fontSize={12}
-          /> */}
+            fontFamily={"IRANYekan"}
+          />
           {/* <button className="border flex flex-row w-[136px] h-[40px] items-center rounded-lg justify-center gap-x-2 py-[4px] px-[8px]">
             <img src="/login-icon.svg" />{" "}
             <p className=" text-[12px] font-[700]"> ورود | ثبت نام</p>

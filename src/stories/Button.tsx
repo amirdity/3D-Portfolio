@@ -1,6 +1,5 @@
-import React from 'react';
-import './button.css';
-
+import "./button.css";
+import loginIcon from "../Projects/digikala/public/asset/login-icon.svg"
 export interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
@@ -13,7 +12,7 @@ export interface ButtonProps {
   /**
    * How large should the button be?
    */
-  size?: 'small' | 'medium' | 'large';
+  size?: "small" | "medium" | "large";
   /**
    * Button contents
    */
@@ -22,6 +21,20 @@ export interface ButtonProps {
    * Optional click handler
    */
   onClick?: () => void;
+  borderColor?: string;
+  borderRadius?: number;
+  borderWidth?: number;
+  display: "block" | "flex";
+  borderStyle: "solid" | "none";
+  color?: string;
+  padding?: string;
+  justifyContent: "center";
+  alignContent: "center";
+  alignItems: "center";
+  width?: number;
+  height?: number;
+  fontFamily: "IRANYekan";
+  fontSize?: number;
 }
 
 /**
@@ -29,19 +42,54 @@ export interface ButtonProps {
  */
 export const Button = ({
   primary = false,
-  size = 'medium',
+  size = "medium",
   backgroundColor,
   label,
+  borderColor,
+  display,
+  borderRadius,
+  borderWidth,
+  borderStyle,
+  color,
+  padding,
+  justifyContent,
+  alignContent,
+  alignItems,
+  width,
+  height,
+  fontFamily,
+  fontSize,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const mode = primary
+    ? "storybook-button--primary"
+    : "storybook-button--secondary";
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
+      className={["storybook-button", `storybook-button--${size}`, mode].join(
+        " "
+      )}
+      style={{
+        backgroundColor,
+        borderColor,
+        borderRadius,
+        borderWidth,
+        borderStyle,
+        display,
+        color,
+        padding,
+        justifyContent,
+        alignContent,
+        alignItems,
+        width,
+        height,
+        fontFamily,
+        fontSize,
+      }}
       {...props}
     >
+      <img src={loginIcon} alt="ورود | ثبت نام" className="ml-1" />
       {label}
     </button>
   );
