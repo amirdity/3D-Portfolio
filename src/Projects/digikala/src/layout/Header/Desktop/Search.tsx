@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import searchIcon from "../../../../public//asset/header/searchIcon.svg";
 
 export default function Search() {
   const [show,setShow] = useState(false)
@@ -13,7 +13,7 @@ export default function Search() {
         onClick={showDesktopSearch}
       >
         <img
-          src="/asset/header/searchIcon.svg"
+          src={searchIcon}
           alt="search"
           width={24}
           className="bg-inherit mr-3"

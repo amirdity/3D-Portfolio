@@ -36,7 +36,7 @@
   font-family: IRANYekan;
   src: url("../font/Qs_Iranyekan.ttf");
 }
-* {
+.digikala {
   font-family: IRANYekan, sans-serif;
   box-sizing: border-box;
   background-color: #ffffff;
@@ -50,7 +50,7 @@
   line-height: 5px;
   
 }
-:root {
+/* :root {
   --font-family: IRANYekan, sans-serif;
   --spacing-base: 4px;
   --global-radius: 8px;
@@ -58,7 +58,7 @@
   --medium-radius: 8px;
   --medium-plus-radius: 12px;
   --large-radius: 16px;
-}
+} */
 /* animations */
 .mobileSearchAnimation {
   animation: showMobile .3s ease;

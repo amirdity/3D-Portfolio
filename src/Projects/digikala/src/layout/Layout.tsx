@@ -1,15 +1,16 @@
+import Digikala from "../Digikala";
 import Footer from "./Footer";
 import Header from "./Header/Header";
-import { Outlet } from "react-router-dom";
+
 
 function Layout() {
   return (
-    <>
+    <div className="bg-white digikala text-black" dir="rtl">
       
       <Header />
-      <Outlet />
+      <Digikala/>
       <Footer />
-    </>
+    </div>
   );
 }
 

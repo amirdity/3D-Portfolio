@@ -88,6 +88,7 @@ const Story = styled.div`
     border-radius: 50%;
     height: 40px;
     width: 40px;
+    background: white;
   }
 
   & .swiper-button-next:after,
@@ -143,11 +144,14 @@ function StorySlide() {
                 <div
                   className={`"rounded-full items-center justify-center flex w-[80px] h-[80px] ${classes.story} mt-2"`}
                 >
+                  <div className="rounded-full bg-white">
+
                   <img
                     src={slide.src}
                     alt={slide.alt}
-                    className="rounded-full w-[74px] h-[74px] p-1 "
-                  />
+                    className="rounded-full w-[74px] h-[74px] p-1"
+                    />
+                    </div>
                 </div>
                 <p
                   className={`"w-[84px] h-[48px] ${classes["story-text"]} "`}

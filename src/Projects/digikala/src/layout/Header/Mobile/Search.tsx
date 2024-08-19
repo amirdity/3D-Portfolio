@@ -1,5 +1,8 @@
 import { useState } from "react";
-
+import mobileAarrowSearch from "../../../../public/asset/header/mobile-arrow-search.svg"
+import fire from "../../../../public/asset/header/fire.svg"
+import halfArow from "../../../../public/asset/header/half-arrow.svg";
+import searchIcon from "../../../../public/asset/header/searchIcon.svg";
 const buttons: string[] = [
   "ست پرگار",
   "مداد رنگی 24 رنک آریا",
@@ -17,7 +20,7 @@ export default function Search({ close }: { close: () => void }) {
       <header className="px-4 lg:py-2 py-3 relative flex  z-5 bg-base shadow-none border-solid border-0 border-base h-[65px] flex-col">
         <div className="w-full bg-[#f0f0f1] rounded-full flex justify-start gap-1 pr-5 items-center align-middle">
           <img
-            src="/asset/header/mobile-arrow-search.svg"
+            src={mobileAarrowSearch}
             alt="جستجو"
             width={20}
             height={20}
@@ -35,7 +38,7 @@ export default function Search({ close }: { close: () => void }) {
           {searchInput && (
             <button onClick={clearInput} className="bg-transparent ml-3">
               <img
-                src="/asset/header/cross.svg"
+                src={mobileAarrowSearch}
                 alt="cross"
                 width={24}
                 className="bg-transparent"
@@ -47,18 +50,14 @@ export default function Search({ close }: { close: () => void }) {
           {!searchInput && (
             <div className="flex flex-col">
               <div className="flex flex-row gap-4">
-                <img src="/asset/header/fire.svg" alt="fire" width={24} />
+                <img src={fire} alt="fire" width={24} />
                 <span className="">جستجوهای پرطرفدار</span>
               </div>
               <div className="flex flex-row justify-start gap-3 mt-3">
                 {buttons.map((button) => (
-                  <button className="border-[1px] border-[#bebebe] border-solid py-1 pr-2 px-1 rounded-3xl flex justify-around  align-middle text-[13px] font-[500] overflow-hidden">
+                  <button className="border-[1px] border-[#bebebe] border-solid py-1 pr-2 px-1 rounded-3xl flex justify-center align-middle text-[13px] font-[500] items-center">
                     <span>{button}</span>
-                    <img
-                      src="asset/header/half-arrow.svg"
-                      alt="arrow"
-                      width={20}
-                    />
+                    <img src={halfArow} alt="arrow" width={20} />
                   </button>
                 ))}
               </div>
@@ -67,7 +66,7 @@ export default function Search({ close }: { close: () => void }) {
           {searchInput && (
             <div className="flex flex-col">
               <div className="flex flex-row gap-4 overflow-hidden max-w-[700px]">
-                <img src="/asset/header/searchIcon.svg" alt="fire" width={24} />
+                <img src={searchIcon} alt="fire" width={24} />
                 <p className="text-subtitle-strong text-neutral-700 flex align-center overflow-hidden">
                   جستجوی «{searchInput}»
                 </p>

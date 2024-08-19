@@ -1,16 +1,21 @@
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 import Homepage from "./Homepage";
 import GoalTypeScript from "./Projects/Goal-typescript/GoalTypeScript";
 import TimerTypeScript from "./Projects/Timer-typescript/TimerTypeScript";
 import ChartbarExpenseTypescript from "./Projects/Chartbar-expense-typescript/ChartbarExpenseTypescript";
-import Digikala from "./Projects/digikala/src/Digikala";
+import Layout from "./Projects/digikala/src/layout/Layout";
 const route = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/">
       <Route index element={<Homepage />} />
       <Route path="*" element={<Homepage />} />
       <Route path="/goal-typescript" element={<GoalTypeScript />} />
-      <Route path="/digikala" element={<Digikala />} />
+      <Route path="/digikala" element={<Layout />} />
       <Route path="/timer-typescript" element={<TimerTypeScript />} />
       <Route
         path="/chartbar-expense-typescript"
@@ -20,7 +25,7 @@ const route = createBrowserRouter(
   )
 );
 function App() {
-  return <RouterProvider router={route}/>;
+  return <RouterProvider router={route} />;
 }
 
 export default App;

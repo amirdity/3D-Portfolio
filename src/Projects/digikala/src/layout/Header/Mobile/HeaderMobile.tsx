@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Search from "./Search";
-
+import searchIcon from "../../../../public/asset/header/searchIcon.svg";
+import digikalaSearch from "../../../../public/asset/header/digikalaSearch.svg"
 export default function HeaderMobile() {
   const [showMobileSearch, setShowMobileSearch] = useState<boolean>(false);
   function showAnimation() {
@@ -26,7 +27,7 @@ export default function HeaderMobile() {
       >
         <div className="w-full bg-[#f0f0f1] rounded-full flex justify-start gap-1 pr-5 py-2 items-center align-middle">
           <img
-            src="/asset/header/searchIcon.svg"
+            src={searchIcon}
             alt="جستجو"
             width={20}
             height={20}
@@ -36,7 +37,7 @@ export default function HeaderMobile() {
             جستجو در
           </span>
           <img
-            src="/asset/header/digikalaSearch.svg"
+            src={digikalaSearch}
             alt="جستجو"
             width={61}
             className="bg-transparent"
