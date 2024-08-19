@@ -3,6 +3,13 @@ import MegaMenu from "../../../components/header/MegaMenu";
 import Search from "./Search";
 import logo from "../../../../public/asset/header/digikala-logo-asli.svg";
 import { Button } from "../../../../../../stories/Button";
+import cartIcon from "../../../../public/asset/header/cart-icon.svg";
+import shegeftAngiz from "../../../../public/asset/header/shegeftAngiz.svg";
+import supermarker from "../../../../public/asset/header/super-market-icon.svg";
+import giftCart from "../../../../public/asset/header/giftCart-icon.svg";
+import bestSeleres from "../../../../public/asset/header/bestSeleres-icon.svg";
+import offIcon from "../../../../public/asset/header/off-icon.svg";
+import location from "../../../../public/asset/header/location-icon.svg";
 export default function HeaderDesktop() {
   return (
     <header className="w-full flex flex-col border-b-gray-300 border-b-[1px] mx-auto">
@@ -53,7 +60,7 @@ export default function HeaderDesktop() {
           <span className="h-[20px] w-[1px] border-gray border border-solid my-auto" />
 
           <a href="/" className="my-auto">
-            <img src="/asset/header/cart-icon.svg" alt="سبد خرید" />
+            <img src={cartIcon} alt="سبد خرید" />
           </a>
         </div>
       </div>
@@ -63,50 +70,38 @@ export default function HeaderDesktop() {
           <MegaMenu />
           <span className="h-[20px] w-[1px] border-gray border border-solid my-auto" />
           <HeaderNavbar
-            src="/asset/header/shegeftAngiz.svg"
+            src={shegeftAngiz}
             alt="شگفت‌انگیزها"
             link="/incredible-offers"
           >
             شگفت‌انگیزها
           </HeaderNavbar>
-          <HeaderNavbar
-            src="/asset/header/super-market-icon.svg"
-            alt="سوپرمارکت"
-            link="/fresh"
-          >
+          <HeaderNavbar src={supermarker} alt="سوپرمارکت" link="/fresh">
             سوپرمارکت
           </HeaderNavbar>
-          <HeaderNavbar
-            src="/asset/header/giftCart-icon.svg"
-            alt="کارت هدیه"
-            link="/dk-ds-gift-card"
-          >
+          <HeaderNavbar src={giftCart} alt="کارت هدیه" link="/dk-ds-gift-card">
             کارت هدیه
           </HeaderNavbar>
           <HeaderNavbar
-            src="/asset/header/bestSeleres-icon.svg"
+            src={bestSeleres}
             alt="پرفروش‌ترین‌ها"
             link="/best-selling"
           >
             پرفروش‌ترین‌ها
           </HeaderNavbar>
           <HeaderNavbar
-            src="/asset/header/off-icon.svg"
+            src={offIcon}
             alt="تخفیف‌ها و پیشنهادها"
             link="/promotion-center"
           >
             تخفیف‌ها و پیشنهادها
           </HeaderNavbar>
           <span className="h-[20px] w-[1px] border-gray border border-solid my-auto" />
-          <span className="text-[12px] mt-[9px] ml-2"> سوالی دارید؟</span>
-          <span className="text-[12px] mt-[9px]"> در دیجی‌کالا بفروشید!</span>
+          <span className="text-[12px] mt-[5px] ml-2"> سوالی دارید؟</span>
+          <span className="text-[12px] mt-[5px]"> در دیجی‌کالا بفروشید!</span>
         </div>
         <div className="flex flex-row items-center gap-x-2 mb-0 jsustify-center">
-          <img
-            src="/asset/header/location-icon.svg"
-            alt="لوکیشن"
-            className="w-[20px] h-[20px]"
-          />
+          <img src={location} alt="لوکیشن" className="w-[20px] h-[20px]" />
           <span className="text-[12px]">لطفا شهر خود را انتخاب کنید</span>
         </div>
       </nav>

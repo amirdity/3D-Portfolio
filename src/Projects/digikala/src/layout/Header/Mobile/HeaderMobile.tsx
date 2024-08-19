@@ -1,14 +1,16 @@
 import { useState } from "react";
 import Search from "./Search";
 import searchIcon from "../../../../public/asset/header/searchIcon.svg";
-import digikalaSearch from "../../../../public/asset/header/digikalaSearch.svg"
+import digikalaSearch from "../../../../public/asset/header/digikalaSearch.svg";
 export default function HeaderMobile() {
   const [showMobileSearch, setShowMobileSearch] = useState<boolean>(false);
   function showAnimation() {
     setShowMobileSearch(!showMobileSearch);
   }
-  const hide = "hideMobileSearchAnimation absolute top-0 left-0 w-full h-full z-20";
-  const show = "absolute top-0 left-0 w-full h-full mobileSearchAnimation z-20 ";
+  const hide =
+    "hideMobileSearchAnimation absolute top-0 left-0 w-full h-full z-20";
+  const show =
+    "absolute top-0 left-0 w-full h-full mobileSearchAnimation z-20 ";
   return (
     <div className="top-0 left-0 w-full bg-[#fff] h-[65px] mb-10">
       {/*------------------------ BANER ----------------------*/}
@@ -22,7 +24,7 @@ export default function HeaderMobile() {
         </picture>
       </a>
       <header
-        className="px-4 lg:py-2 py-3 flex items-center z-5 bg-base shadow-none border-solid border-b-[1px] border-0 border-base  w-screen fixed mt-[60px] z-10"
+        className="px-4 lg:py-2 py-3 flex items-center z-5 bg-base shadow-none border-solid border-b-[1px] border-0 border-base  w-screen fixed mt-[60px] z-10 bg-white"
         onClick={showAnimation}
       >
         <div className="w-full bg-[#f0f0f1] rounded-full flex justify-start gap-1 pr-5 py-2 items-center align-middle">

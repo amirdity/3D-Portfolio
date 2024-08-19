@@ -1,14 +1,16 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import classes from "./ShegeftAngizSlide.module.css";
+import Timer from "./Timer";
 import { Pagination, Navigation } from "swiper/modules";
-import Amazings from "../../../../../public/asset/main/Amazings.svg"
+import Amazings from "../../../../../public/asset/main/Amazings.svg";
 import Amazing from "../../../../../public/asset/main/Amazing.svg";
 import toman from "../../../../../public/asset/main/toman.svg";
 import arrowSlide from "../../../../../public/asset/main/arrowSlide.svg";
+import styled from "styled-components";
 type Slide = {
   src: string;
   alt: string;
   off: number;
-
   price: number;
   realPrice: number;
 };
@@ -102,152 +104,157 @@ const slide: Array<Slide> = [
     realPrice: 299,
   },
 ];
-
-import classes from "./ShegeftAngizSlide.module.css";
-import Timer from "./Timer";
+const Style = styled.div`
+  & .swiper-button-next,
+  .swiper-button-prev {
+    opacity: 0;
+  }
+`;
 function ShegeftAngizSlide() {
   return (
-    <div
-      className={`${classes.shgeftAngiz} flex flex-row justify-center items-center align-middle h-[294px] rounded-[20px]`}
-    >
-      <div className="max-w-[1336px] w-screen flex h-[254px] pt-5 flex-row  mx-auto justify-between items-center text-center  storySlide bg-inherit py-5 px-0">
-        <Swiper
-          dir="rtl"
-          slidesPerView={9}
-          spaceBetween={1}
-          navigation={true}
-          breakpoints={{
-            350: {
-              slidesPerView: 4,
-              spaceBetween: 10,
-            },
-            640: {
-              slidesPerView: 4,
-              spaceBetween: 10,
-            },
-            768: {
-              slidesPerView: 6,
-              spaceBetween: 10,
-            },
-            1024: {
-              slidesPerView: 6,
-              spaceBetween: 10,
-            },
-            1200: {
-              slidesPerView: 7,
-              spaceBetween: 10,
-            },
-            1400: {
-              slidesPerView: 8,
-              spaceBetween: 10,
-            },
-          }}
-          modules={[Pagination, Navigation]}
-          className={classes.firstSlide}
-        >
-          {/* FIRST SLIDE */}
-          <SwiperSlide className="h-[254px] w-[166px] bg-red-600 ">
-            <div
-              className={`flex flex-col bg-red-600 h-[254px] w-[94px] justify-center items-center text-white pr-5`}
-            >
-              <div className="bg-inherit">
-                <img
-                  src={Amazings}
-                  alt="پیشنهاد شگفت انگیز"
-                  className="bg-inherit"
-                />
+    <Style>
+      <div
+        className={`${classes.shgeftAngiz} flex flex-row justify-center items-center align-middle h-[294px] rounded-[20px]`}
+      >
+        <div className="max-w-[1336px] w-screen flex h-[254px] pt-5 flex-row  mx-auto justify-between items-center text-center  storySlide bg-inherit py-5">
+          <Swiper
+            dir="rtl"
+            slidesPerView={9}
+            spaceBetween={1}
+            navigation={true}
+            breakpoints={{
+              350: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+              },
+              640: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 6,
+                spaceBetween: 10,
+              },
+              1024: {
+                slidesPerView: 6,
+                spaceBetween: 10,
+              },
+              1200: {
+                slidesPerView: 7,
+                spaceBetween: 10,
+              },
+              1400: {
+                slidesPerView: 8,
+                spaceBetween: 10,
+              },
+            }}
+            modules={[Pagination, Navigation]}
+            // className={classes.firstSlide}
+          >
+            {/* FIRST SLIDE */}
+            <SwiperSlide className="  bg-red-600 ">
+              <div
+                className={`flex flex-col h-[254px] justify-center items-center text-white pr-5`}
+              >
+                <div className="bg-inherit">
+                  <img
+                    src={Amazings}
+                    alt="پیشنهاد شگفت انگیز"
+                    className="bg-inherit"
+                  />
+                </div>
+                <div className="bg-inherit">
+                  <Timer />
+                </div>
+                <div className="bg-inherit">
+                  <img
+                    src={Amazing}
+                    alt="پیشنهاد شگفت انگیز"
+                    className="bg-inherit"
+                  />
+                </div>
+                <p className="bg-inherit">مشاهده همه &gt; </p>
               </div>
-              <div className="bg-inherit">
-                <Timer />
-              </div>
-              <div className="bg-inherit">
-                <img
-                  src={Amazing}
-                  alt="پیشنهاد شگفت انگیز"
-                  className="bg-inherit"
-                />
-              </div>
-              <p className="bg-inherit">مشاهده همه &gt; </p>
-            </div>
-          </SwiperSlide>
-          {/* SECOND SLIDE */}
-          <SwiperSlide className=" border-red-400 border-x-[5px] rounded-r-2xl bg-red-700">
-            <div className="flex flex-col h-[254px] w-[165px] justify-center items-center rounded-r-2xl ">
-              <div className=" items-center justify-center flex w-[144px] h-[132px]">
-                <img
-                  src={secondSlide.src}
-                  alt={secondSlide.alt}
-                  className="w-[132px] h-[132px]"
-                />
-              </div>
-              <p className="w-[144px] h-[40px] overflow-hidden">
-                {secondSlide.alt}
-              </p>
-              <div className="flex flex-row justify-between items-center align-middle h-[25px] w-[144px] font-bold  px-2 my-3">
-                <p className="bg-[#d32f2f] rounded-3xl p-1 text-white flex px-2 text-[10px]">
-                  {" "}
-                  % {secondSlide.off.toLocaleString("ar-EG")}
-                </p>
-                <p className="flex flex-row text-[15px]">
-                  {(secondSlide.price * 1000).toLocaleString("ar-EG")}
-                  <img src={toman} alt="تومان" className="mx-2" />
-                </p>
-              </div>
-              <div className="flex flex-row h-[25px] w-[144px] font-bold text-[1.2rem] justify-end">
-                <p className="mx-10 text-gray-400 line-through">
-                  {(secondSlide.realPrice * 1000).toLocaleString("ar-EG")}
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          {/* DINAMIC SLIDE */}
-          {slide.map((slide) => (
-            <SwiperSlide className=" border-red-400 border-x-[5px] ">
-              <div className="flex flex-col h-[254px] w-[165px] justify-center items-center">
+            </SwiperSlide>
+            {/* SECOND SLIDE */}
+            <SwiperSlide className=" border-red-400 border-x-[5px] rounded-r-2xl bg-white">
+              <div className="flex flex-col h-[254px] w-[165px] justify-center items-center rounded-r-2xl ">
                 <div className=" items-center justify-center flex w-[144px] h-[132px]">
                   <img
-                    src={slide.src}
-                    alt={slide.alt}
+                    src={secondSlide.src}
+                    alt={secondSlide.alt}
                     className="w-[132px] h-[132px]"
                   />
                 </div>
-                <p className="w-[144px] h-[40px]  overflow-hidden">
-                  {slide.alt}
+                <p className="w-[144px] h-[40px] overflow-hidden">
+                  {secondSlide.alt}
                 </p>
                 <div className="flex flex-row justify-between items-center align-middle h-[25px] w-[144px] font-bold  px-2 my-3">
                   <p className="bg-[#d32f2f] rounded-3xl p-1 text-white flex px-2 text-[10px]">
                     {" "}
-                    % {slide.off.toLocaleString("ar-EG")}
+                    % {secondSlide.off.toLocaleString("ar-EG")}
                   </p>
                   <p className="flex flex-row text-[15px]">
-                    {(slide.price * 1000).toLocaleString("ar-EG")}
+                    {(secondSlide.price * 1000).toLocaleString("ar-EG")}
                     <img src={toman} alt="تومان" className="mx-2" />
                   </p>
                 </div>
                 <div className="flex flex-row h-[25px] w-[144px] font-bold text-[1.2rem] justify-end">
                   <p className="mx-10 text-gray-400 line-through">
-                    {(slide.realPrice * 1000).toLocaleString("ar-EG")}
+                    {(secondSlide.realPrice * 1000).toLocaleString("ar-EG")}
                   </p>
                 </div>
               </div>
             </SwiperSlide>
-          ))}
-          {/* LAST SLIDE */}
-          <SwiperSlide className="rounded-l-2xl">
-            <div className="flex flex-col h-[254px] w-[165px]  justify-center items-center rounded-l-2xl">
-              <div className="flex flex-row justify-center border-[#19bfd3] border-[3px] rounded-full h-[51px] w-[51px]">
-                <img
-                  src={arrowSlide}
-                  alt="مشاهده همه"
-                  className=" rounded-full"
-                />
+            {/* DINAMIC SLIDE */}
+            {slide.map((slide) => (
+              <SwiperSlide className=" border-red-400 border-x-[5px] bg-white">
+                <div className="flex flex-col h-[254px] w-[165px] justify-center items-center">
+                  <div className=" items-center justify-center flex w-[144px] h-[132px]">
+                    <img
+                      src={slide.src}
+                      alt={slide.alt}
+                      className="w-[132px] h-[132px]"
+                    />
+                  </div>
+                  <p className="w-[144px] h-[40px]  overflow-hidden">
+                    {slide.alt}
+                  </p>
+                  <div className="flex flex-row justify-between items-center align-middle h-[25px] w-[144px] font-bold  px-2 my-3">
+                    <p className="bg-[#d32f2f] rounded-3xl p-1 text-white flex px-2 text-[10px]">
+                      {" "}
+                      % {slide.off.toLocaleString("ar-EG")}
+                    </p>
+                    <p className="flex flex-row text-[15px]">
+                      {(slide.price * 1000).toLocaleString("ar-EG")}
+                      <img src={toman} alt="تومان" className="mx-2" />
+                    </p>
+                  </div>
+                  <div className="flex flex-row h-[25px] w-[144px] font-bold text-[1.2rem] justify-end">
+                    <p className="mx-10 text-gray-400 line-through">
+                      {(slide.realPrice * 1000).toLocaleString("ar-EG")}
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+            {/* LAST SLIDE */}
+            <SwiperSlide className="rounded-l-2xl bg-white">
+              <div className="flex flex-col h-[254px] w-[165px]  justify-center items-center rounded-l-2xl">
+                <div className="flex flex-row justify-center border-[#19bfd3] border-[3px] rounded-full h-[51px] w-[51px]">
+                  <img
+                    src={arrowSlide}
+                    alt="مشاهده همه"
+                    className=" rounded-full"
+                  />
+                </div>
+                <p>مشاهده همه</p>
               </div>
-              <p>مشاهده همه</p>
-            </div>
-          </SwiperSlide>
-        </Swiper>
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
-    </div>
+    </Style>
   );
 }
 

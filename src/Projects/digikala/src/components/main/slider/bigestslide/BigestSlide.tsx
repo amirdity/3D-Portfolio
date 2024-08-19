@@ -47,6 +47,7 @@ const Style = styled.div`
     border-radius: 50%;
     height: 40px;
     width: 40px;
+    background: white;
   }
   & .swiper-button-next:after,
   .swiper-button-prev:after {

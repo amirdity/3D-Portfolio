@@ -1,3 +1,4 @@
+import dot from "../../../public/asset/main/dot.svg"
 type Icons = {
   src: string;
   alt: string;
@@ -56,7 +57,7 @@ function DigiJet() {
       <div className="flex flex-col justify-center items-center h-[104px] w-[82px]">
         <div className="bg-neutral-100 h-[52px] w-[52px] rounded-full flex justify-center items-center">
           <img
-            src="/asset/main/dot.svg"
+            src={dot}
             alt="بیشتر"
             className=" h-[20px] w-[30px] rounded-full bg-inherit"
           />
