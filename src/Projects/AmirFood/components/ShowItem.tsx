@@ -1,7 +1,6 @@
-import * as React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import burger from "../asset/burger.jpg"
+import burger from "../asset/burger.jpg";
 import curry from "../asset/curry.jpg";
 import dumplings from "../asset/dumplings.jpg";
 import HotdogHeader from "../asset/HotdogHeader.webp";
@@ -9,6 +8,10 @@ import macncheese from "../asset/macncheese.jpg";
 import pizza from "../asset/pizza.jpg";
 import schnitzel from "../asset/schnitzel.jpg";
 import tomatoSalad from "../asset/tomato-salad.jpg";
+import beefHotdog from "../asset/beefHotdog.webp";
+import classicHotdog from "../asset/classicHotdog.avif";
+import GermanHot from "../asset/GermanHot.jpg";
+import hamburger from "../asset/hamburger.webp";
 function srcset(image: string, size: number, rows = 1, cols = 1) {
   return {
     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
@@ -17,7 +20,6 @@ function srcset(image: string, size: number, rows = 1, cols = 1) {
     }&fit=crop&auto=format&dpr=2 2x`,
   };
 }
-
 export default function QuiltedImageList() {
   return (
     <ImageList
@@ -42,7 +44,6 @@ export default function QuiltedImageList() {
     </ImageList>
   );
 }
-
 const itemData = [
   {
     img: burger,
@@ -84,21 +85,21 @@ const itemData = [
     title: "Fern",
   },
   {
-    img: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
+    img: hamburger,
     title: "Mushrooms",
     rows: 2,
     cols: 2,
   },
   {
-    img: "https://images.unsplash.com/photo-1567306301408-9b74779a11af",
+    img: classicHotdog,
     title: "Tomato basil",
   },
   {
-    img: "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
+    img: GermanHot,
     title: "Sea star",
   },
   {
-    img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
+    img: beefHotdog,
     title: "Bike",
     cols: 2,
   },

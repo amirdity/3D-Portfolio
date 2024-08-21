@@ -1,8 +1,9 @@
 import { Typography } from "@mui/material";
 import HotdogHeader from "../asset/HotdogHeader.webp";
-import classes from "../../../components/Header/Header.module.css"
-import styles from "./style.module.css"
+import classes from "../../../components/Header/Header.module.css";
+import styles from "./style.module.css";
 import QuiltedImageList from "./ShowItem.tsx";
+import MediaCard from "./Cart";
 export default function Header() {
   return (
     <header className="flex flex-col justify-around items-center mt-10 w-full max-w-[1000px] mx-auto">
@@ -20,9 +21,16 @@ export default function Header() {
         />
       </div>
       <div
-        className={`"mt-10 rounded-[40px] w-full h-[1000px] p-10 mx-10" ${styles.backdrop}`}
+        className={`"mt-10 rounded-[40px] w-full p-10 mx-10 pb-10" ${styles.backdrop}`}
+       
       >
-        <QuiltedImageList/>
+        <QuiltedImageList />
+        <div className="flex flex-row">
+          <MediaCard />
+          {/* <MediaCard />
+          <MediaCard />
+          <MediaCard /> */}
+        </div>
       </div>
     </header>
   );
