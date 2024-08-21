@@ -5,16 +5,18 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import hamburger from "../asset/hamburger.webp";
-import { Rating } from "@mui/material";
+import { IconButton, Rating } from "@mui/material";
+import LoadingButton from "@mui/lab/LoadingButton";
 export default function MediaCard() {
+  function loadingHandler(){}
   return (
     <div className="flex justify-around w-full gap-5 mt-5">
       {foodArray.map((food) => (
-        <Card sx={{ }} key={food.id}>
+        <Card sx={{}} key={food.id}>
           <CardMedia
             sx={{ height: 180 }}
             image={food.image}
-            title="green iguana"
+            title={food.title}
           />
           <CardContent>
             <Typography
@@ -31,9 +33,15 @@ export default function MediaCard() {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button variant="contained" color="success">
-              Success
+            <Button variant="contained" color="success" onClick={loadingHandler}>
+              اضافه کردن
             </Button>
+            <LoadingButton loading variant="contained" color="success">
+              اضافه کردن
+            </LoadingButton>
+            <IconButton color="primary" aria-label="add to shopping cart">
+              {/* <AddShoppingCartIcon /> */}
+            </IconButton>
             <Rating
               name="simple-controlled"
               defaultValue={food.star}
