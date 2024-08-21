@@ -1,16 +1,16 @@
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import burger from "../asset/burger.jpg";
-import curry from "../asset/curry.jpg";
-import dumplings from "../asset/dumplings.jpg";
+import burger from "../asset/burger.webp";
+import curry from "../asset/curry.webp";
+import dumplings from "../asset/dumplings.webp";
 import HotdogHeader from "../asset/HotdogHeader.webp";
-import macncheese from "../asset/macncheese.jpg";
-import pizza from "../asset/pizza.jpg";
-import schnitzel from "../asset/schnitzel.jpg";
-import tomatoSalad from "../asset/tomato-salad.jpg";
+import macncheese from "../asset/macncheese.webp";
+import pizza from "../asset/pizza.webp";
+import schnitzel from "../asset/schnitzel.webp";
+import tomatoSalad from "../asset/tomato-salad.webp";
 import beefHotdog from "../asset/beefHotdog.webp";
-import classicHotdog from "../asset/classicHotdog.avif";
-import GermanHot from "../asset/GermanHot.jpg";
+import classicHotdog from "../asset/classicHotdog.webp";
+import GermanHot from "../asset/GermanHot.webp";
 import hamburger from "../asset/hamburger.webp";
 function srcset(image: string, size: number, rows = 1, cols = 1) {
   return {

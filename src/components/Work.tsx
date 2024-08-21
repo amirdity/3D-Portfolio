@@ -1,6 +1,6 @@
 import digikala from "../assets/MyProj/digikala.webp";
 import image3 from "../assets/MyProj/jingil.webp";
-import image4 from "../assets/MyProj/login.webp";
+import amirfood from "../assets/MyProj/amirfood.webp";
 import { motion } from "framer-motion";
 import { fadeIn } from "../varients";
 import { Link } from "react-router-dom";
@@ -34,18 +34,18 @@ const Work = () => {
                 <div className="group-hover:bg-black/50 w-full h-full absolute z-40 transition-all duration-300"></div>
 
                 <img
-                  src={image4}
-                  alt="last cv"
+                  src={amirfood}
+                  alt="amirfood"
                   className="group-hover:scale-125 transition-all duration-500"
                 />
                 {/**pretty */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50   ">
-                  <span className="text-gradient">LOGIN ➡ (TURN VPN ON )</span>{" "}
+                  <span className="text-gradient">AMIR FOOD</span>{" "}
                 </div>
                 {/**title */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
                   <span className="text-3xl text-white">
-                    NEXTJS-CONTEXT API-RESTFUL API
+                   MUI REDUX CONTEXT
                   </span>
                 </div>
               </div>
@@ -72,7 +72,9 @@ const Work = () => {
                 />
                 {/**pretty */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50   ">
-                  <span className="text-gradient">"SHOP ➡ (TURN VPN ON )"</span>{" "}
+                  <span className="text-gradient">
+                    "SHOP ➡ (TURN VPN ON )"
+                  </span>{" "}
                 </div>
                 {/**title */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">

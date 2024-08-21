@@ -1,5 +1,4 @@
-import { Typography } from "@mui/material";
-import HotdogHeader from "../asset/HotdogHeader.webp";
+import { Button, Typography } from "@mui/material";
 import classes from "../../../components/Header/Header.module.css";
 import styles from "./style.module.css";
 import QuiltedImageList from "./ShowItem.tsx";
@@ -13,24 +12,28 @@ export default function Header() {
             AMIR <span className="text-[#e030f0]">FOOD</span>
           </div>
         </Typography>
-        <img
-          src={HotdogHeader}
-          alt="هات داگ"
-          width={200}
-          className="rounded-full"
-        />
+        <div dir="rtl" className="gap-5 flex flex-row">
+          <Button variant="contained" color="success">
+            <span className="digikalaFontFamily text-[17px] font-[550]">
+              ورود
+            </span>
+          </Button>
+          {/* <Button variant="contained" color="error">
+            <span className="digikalaFontFamily text-[17px] font-bold">خروج</span>
+          </Button> */}
+          <Button variant="contained" color="warning">
+            <span className="digikalaFontFamily text-[17px] font-bold">
+              سبد خرید
+            </span>
+          </Button>
+        </div>
       </div>
       <div
         className={`"mt-10 rounded-[40px] w-full p-10 mx-10 pb-10" ${styles.backdrop}`}
-       
       >
         <QuiltedImageList />
-        <div className="flex flex-row">
-          <MediaCard />
-          {/* <MediaCard />
-          <MediaCard />
-          <MediaCard /> */}
-        </div>
+
+        <MediaCard />
       </div>
     </header>
   );
