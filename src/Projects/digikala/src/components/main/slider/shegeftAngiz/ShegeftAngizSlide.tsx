@@ -123,16 +123,24 @@ function ShegeftAngizSlide() {
             spaceBetween={1}
             navigation={true}
             breakpoints={{
-              350: {
+              100: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              300: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              470: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
+              670: {
                 slidesPerView: 4,
                 spaceBetween: 10,
               },
-              640: {
-                slidesPerView: 4,
-                spaceBetween: 10,
-              },
-              768: {
-                slidesPerView: 6,
+              780: {
+                slidesPerView: 5,
                 spaceBetween: 10,
               },
               1024: {
@@ -152,7 +160,7 @@ function ShegeftAngizSlide() {
             // className={classes.firstSlide}
           >
             {/* FIRST SLIDE */}
-            <SwiperSlide className="  bg-red-600 ">
+            <SwiperSlide>
               <div
                 className={`flex flex-col h-[254px] justify-center items-center text-white pr-5`}
               >
@@ -177,7 +185,7 @@ function ShegeftAngizSlide() {
               </div>
             </SwiperSlide>
             {/* SECOND SLIDE */}
-            <SwiperSlide className=" border-red-400 border-x-[5px] rounded-r-2xl bg-white">
+            <SwiperSlide className="rounded-r-2xl bg-white">
               <div className="flex flex-col h-[254px] w-[165px] justify-center items-center rounded-r-2xl ">
                 <div className=" items-center justify-center flex w-[144px] h-[132px]">
                   <img
@@ -196,7 +204,7 @@ function ShegeftAngizSlide() {
                   </p>
                   <p className="flex flex-row text-[15px]">
                     {(secondSlide.price * 1000).toLocaleString("ar-EG")}
-                    <img src={toman} alt="تومان" className="mx-2" />
+                    <img src={toman} alt="تومان" className="mx-2" width={24} />
                   </p>
                 </div>
                 <div className="flex flex-row h-[25px] w-[144px] font-bold text-[1.2rem] justify-end">
@@ -208,7 +216,7 @@ function ShegeftAngizSlide() {
             </SwiperSlide>
             {/* DINAMIC SLIDE */}
             {slide.map((slide) => (
-              <SwiperSlide className=" border-red-400 border-x-[5px] bg-white">
+              <SwiperSlide className=" bg-white">
                 <div className="flex flex-col h-[254px] w-[165px] justify-center items-center">
                   <div className=" items-center justify-center flex w-[144px] h-[132px]">
                     <img
@@ -227,7 +235,12 @@ function ShegeftAngizSlide() {
                     </p>
                     <p className="flex flex-row text-[15px]">
                       {(slide.price * 1000).toLocaleString("ar-EG")}
-                      <img src={toman} alt="تومان" className="mx-2" />
+                      <img
+                        src={toman}
+                        alt="تومان"
+                        className="mx-2"
+                        width={24}
+                      />
                     </p>
                   </div>
                   <div className="flex flex-row h-[25px] w-[144px] font-bold text-[1.2rem] justify-end">

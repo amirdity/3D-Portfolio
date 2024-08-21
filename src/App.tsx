@@ -17,6 +17,8 @@ const route = createBrowserRouter(
       <Route path="*" element={<Homepage />} />
       <Route path="/goal-typescript" element={<GoalTypeScript />} />
       <Route path="/digikala" element={<Layout />} />
+      <Route path="*/digikala" element={<Layout />} />
+      <Route path="/digikala/*" element={<Layout />} />
       <Route path="/amir-food" element={<AmirFood />} />
       <Route path="/timer-typescript" element={<TimerTypeScript />} />
       <Route
