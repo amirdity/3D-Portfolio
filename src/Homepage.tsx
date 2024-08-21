@@ -2,6 +2,7 @@ import About from "./components/About";
 import Banner from "./components/Banner";
 import Header from "./components/Header/Header";
 import Nav from "./components/Navbar";
+import WorkThree from "./components/WordThree";
 import Work from "./components/Work";
 import WorkTwo from "./components/WorkTwo";
 function Homepage() {
@@ -13,6 +14,7 @@ function Homepage() {
       <About />
       <Work />
       <WorkTwo />
+      <WorkThree/>
     </div>
   );
 }

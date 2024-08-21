@@ -1,0 +1,7 @@
+.backdrop {
+  /* filter: blur(1px);
+  -webkit-filter: blur(1px); */
+  background-color: rgba(256, 256, 256, 0.4);
+  /* Black w/opacity/see-through */
+  margin-top: 30px;
+}

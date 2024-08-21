@@ -28,7 +28,7 @@ const Work = () => {
             </div>
             {/**image */}
 
-            <a href="https://login-otp-rust.vercel.app/">
+            <Link to="/amir-food">
               <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
                 {/**over lay */}
                 <div className="group-hover:bg-black/50 w-full h-full absolute z-40 transition-all duration-300"></div>
@@ -49,7 +49,7 @@ const Work = () => {
                   </span>
                 </div>
               </div>
-            </a>
+            </Link>
           </motion.div>
           <motion.div
             variants={fadeIn("left", 0.2)}
