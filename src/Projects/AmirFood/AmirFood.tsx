@@ -1,13 +1,11 @@
 import styled from "styled-components";
 import Header from "./components/Header";
+import { Provider } from "react-redux";
+import { store } from "./Redux/store/ReduxStore";
 
 const Style = styled.div`
   background: rgb(238, 174, 202);
-  background: radial-gradient(
-    circle,
-    #e43e86 0%,
-    #700404 100%
-  );
+  background: radial-gradient(circle, #e43e86 0%, #700404 100%);
   /* height:100vh ; */
   display: flex;
   flex-direction: column;
@@ -19,7 +17,7 @@ const Style = styled.div`
 export default function AmirFood() {
   return (
     <Style>
-      <Header />
+      <Provider store={store} children={<Header />} />
     </Style>
   );
 }

@@ -7,16 +7,20 @@ interface Props {
 }
 const MealItemForm = (props: Props) => {
   const [amountIsValid, setAmountIsValid] = useState(true);
-  const amountInputRef = useRef<number>();
+  const amountInputRef = useRef<string | undefined>(undefined);
 
   const submitHandler = (event: FormEvent) => {
     event.preventDefault();
+    // if(amountInputRef === undefined) {throw new Error("amountInputRef is undefined")}
 
-    const enteredAmount = amountInputRef.current?.value;
-    const enteredAmountNumber = +enteredAmount;
+    const enteredAmount = amountInputRef.current?.valueOf()
+
+
+const enteredAmountNumber = +(enteredAmount?.toString() ?? '0');//+
+
 
     if (
-      enteredAmount.trim().length === 0 ||
+      enteredAmount?.trim().length === 0 ||
       enteredAmountNumber < 1 ||
       enteredAmountNumber > 5
     ) {
@@ -30,7 +34,8 @@ const MealItemForm = (props: Props) => {
   return (
     <form className={classes.form} onSubmit={submitHandler}>
       <Input
-        ref={amountInputRef}
+        ref={amountInputRef?.current}
+
         label="Amount"
         input={{
           id: "amount_" + props.id,

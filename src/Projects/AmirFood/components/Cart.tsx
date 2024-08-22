@@ -3,11 +3,12 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import hamburger from "../asset/hamburger.webp";
 import { Rating } from "@mui/material";
-
 import CircularIntegration from "./BuyIcon";
 import styled from "styled-components";
+import FoodArray from "../FoodList";
+import { useCartDispatch } from "../hook/hook";
+import { addToCart } from "../Redux/store/slice/cartSlice";
 const Style = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
@@ -16,12 +17,15 @@ const Style = styled.div`
   justify-content: space-around;
 `;
 export default function MediaCard() {
-  
+  const dispatch = useCartDispatch();
+  // const quantity = useCartSelector((state) => state.cart.);
+  function AddToCartHandler(FoodId: number) {
+    dispatch(addToCart({ id: FoodId }));
+  }
+  // const quanity = useSelector((state)=>state.)
   return (
-   
     <Style>
-
-      {foodArray.map((food) => (
+      {FoodArray.map((food) => (
         <Card key={food.id}>
           <CardMedia
             sx={{ height: 180 }}
@@ -43,9 +47,10 @@ export default function MediaCard() {
             </Typography>
           </CardContent>
           <CardActions>
-            <CircularIntegration />
-            <p className="mx-5">{food.quantity}</p>
-
+            <div onClick={() => AddToCartHandler(food.id)}>
+              <CircularIntegration />
+            </div>
+            {/* <p className="mx-5">{}</p> */}
             <Rating
               name="simple-controlled"
               defaultValue={food.star}
@@ -54,126 +59,6 @@ export default function MediaCard() {
           </CardActions>
         </Card>
       ))}
-      </Style>
-   
+    </Style>
   );
 }
-const foodArray = [
-  {
-    image: hamburger,
-    star: 4.5,
-    title: "یه همبرگر   چرب",
-    description:
-      "با سس و نوشابه و یب یسبسی بیبسیبسیبسب  بسیبس یبیسبس  یبسبسبسب  سبسبسبس بسبس یب سیبس  بسبس  یبیس",
-    id: Math.random(),
-    quantity: 0,
-  },
-  {
-    image: hamburger,
-    star: 4.5,
-    title: "یه همبرگر   چرب",
-    description:
-      "با سس و نوشابه و یب یسبسی بیبسیبسیبسب  بسیبس یبیسبس  یبسبسبسب  سبسبسبس بسبس یب سیبس  بسبس  یبیس",
-    id: Math.random(),
-    quantity: 0,
-  },
-  {
-    image: hamburger,
-    star: 4.5,
-    title: "یه همبرگر   چرب",
-    description:
-      "با سس و نوشابه و یب یسبسی بیبسیبسیبسب  بسیبس یبیسبس  یبسبسبسب  سبسبسبس بسبس یب سیبس  بسبس  یبیس",
-    id: Math.random(),
-    quantity: 0,
-  },
-  {
-    image: hamburger,
-    star: 4.5,
-    title: "یه همبرگر   چرب",
-    description:
-      "با سس و نوشابه و یب یسبسی بیبسیبسیبسب  بسیبس یبیسبس  یبسبسبسب  سبسبسبس بسبس یب سیبس  بسبس  یبیس",
-    id: Math.random(),
-    quantity: 0,
-  },
-  {
-    image: hamburger,
-    star: 4.5,
-    title: "یه همبرگر   چرب",
-    description:
-      "با سس و نوشابه و یب یسبسی بیبسیبسیبسب  بسیبس یبیسبس  یبسبسبسب  سبسبسبس بسبس یب سیبس  بسبس  یبیس",
-    id: Math.random(),
-    quantity: 0,
-  },
-  {
-    image: hamburger,
-    star: 4.5,
-    title: "یه همبرگر   چرب",
-    description:
-      "با سس و نوشابه و یب یسبسی بیبسیبسیبسب  بسیبس یبیسبس  یبسبسبسب  سبسبسبس بسبس یب سیبس  بسبس  یبیس",
-    id: Math.random(),
-    quantity: 0,
-  },
-  {
-    image: hamburger,
-    star: 4.5,
-    title: "یه همبرگر   چرب",
-    description:
-      "با سس و نوشابه و یب یسبسی بیبسیبسیبسب  بسیبس یبیسبس  یبسبسبسب  سبسبسبس بسبس یب سیبس  بسبس  یبیس",
-    id: Math.random(),
-    quantity: 0,
-  },
-  {
-    image: hamburger,
-    star: 4.5,
-    title: "یه همبرگر   چرب",
-    description:
-      "با سس و نوشابه و یب یسبسی بیبسیبسیبسب  بسیبس یبیسبس  یبسبسبسب  سبسبسبس بسبس یب سیبس  بسبس  یبیس",
-    id: Math.random(),
-    quantity: 0,
-  },
-  {
-    image: hamburger,
-    star: 4.5,
-    title: "یه همبرگر   چرب",
-    description:
-      "با سس و نوشابه و یب یسبسی بیبسیبسیبسب  بسیبس یبیسبس  یبسبسبسب  سبسبسبس بسبس یب سیبس  بسبس  یبیس",
-    id: Math.random(),
-    quantity: 0,
-  },
-  {
-    image: hamburger,
-    star: 4.5,
-    title: "یه همبرگر   چرب",
-    description:
-      "با سس و نوشابه و یب یسبسی بیبسیبسیبسب  بسیبس یبیسبس  یبسبسبسب  سبسبسبس بسبس یب سیبس  بسبس  یبیس",
-    id: Math.random(),
-    quantity: 0,
-  },
-  {
-    image: hamburger,
-    star: 4.5,
-    title: "یه همبرگر   چرب",
-    description:
-      "با سس و نوشابه و یب یسبسی بیبسیبسیبسب  بسیبس یبیسبس  یبسبسبسب  سبسبسبس بسبس یب سیبس  بسبس  یبیس",
-    id: Math.random(),
-    quantity: 0,
-  },
-  {
-    image: hamburger,
-    star: 4.5,
-    title: "یه همبرگر   چرب",
-    description:
-      "با سس و نوشابه و یب یسبسی بیبسیبسیبسب  بسیبس یبیسبس  یبسبسبسب  سبسبسبس بسبس یب سیبس  بسبس  یبیس",
-    id: Math.random(),
-    quantity: 0,
-  },
-  {
-    image: hamburger,
-    star: 4.5,
-    title: "یه همبرگر   چرب",
-    description:
-      "با سس و نوشابه و یب یسبسی بیبسیبسیبسب  بسیبس یبیسبس  یبسبسبسب  سبسبسبس بسبس یب سیبس  بسبس  یبیس",
-    id: Math.random(),
-    quantity: 0,
-  },
-];

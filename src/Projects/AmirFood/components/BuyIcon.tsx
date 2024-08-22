@@ -2,12 +2,9 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
 import { green } from "@mui/material/colors";
-
 import Fab from "@mui/material/Fab";
 import CheckIcon from "@mui/icons-material/Check";
-
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-
 export default function CircularIntegration() {
   const [loading, setLoading] = React.useState(false);
   const [success, setSuccess] = React.useState(false);
@@ -35,7 +32,7 @@ export default function CircularIntegration() {
       timer.current = setTimeout(() => {
         setSuccess(true);
         setLoading(false);
-      }, 2000);
+      }, 1300);
     }
   };
 
