@@ -3,7 +3,9 @@ import classes from "../../../components/Header/Header.module.css";
 import styles from "./style.module.css";
 import QuiltedImageList from "./ShowItem.tsx";
 import MediaCard from "./Cart";
+
 export default function Header() {
+  let quantity = null
   return (
     <header className="flex flex-col justify-around items-center mt-10 w-full max-w-[1000px] mx-auto">
       <div className="flex flex-row justify-around items-center mt-10 w-full max-w-[1000px] mx-auto">
@@ -23,7 +25,7 @@ export default function Header() {
           </Button> */}
           <Button variant="contained" color="warning">
             <span className="digikalaFontFamily text-[17px] font-bold">
-              سبد خرید
+              سبد خرید {quantity && quantity}
             </span>
           </Button>
         </div>
