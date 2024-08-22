@@ -47,9 +47,42 @@ export const cartSlice = createSlice({
       }
       if (itemIndex >= 0) {
         const newQuantity = state.items[itemIndex].quantity + 1;
-        state.items[itemIndex] = {...state.items[itemIndex], quantity: newQuantity };
+        state.items[itemIndex] = {
+          ...state.items[itemIndex],
+          quantity: newQuantity,
+        };
+      }
+    },
+    removeFromCart(state, action: PayloadAction<{ id: number }>) {
+      const itemIndex = state.items.findIndex(
+        (item) => item.id === action.payload.id
+      );
+      const item = state.items[itemIndex];
+      // if (itemIndex >= 0) {
+      //   const findItem = () => {
+      //     for (let i = 0; i < state.items.length; i++) {
+      //       if (state.items[i].id === action.payload.id) {
+      //         return state.items[i];
+      //       }
+      //     }
+      //   };
+      // const findedStateItem: CartItem = findItem()!;
+      // const decressItem = findedItem
+      if (item.quantity > 1) {
+        const newQuantity = state.items[itemIndex].quantity - 1;
+        state.items[itemIndex] = {
+          ...state.items[itemIndex],
+          quantity: newQuantity,
+        };
+          
+        
+      } else {
+        const newState = state.items.filter(item => item.id !== action.payload.id)
+        state.items = [...newState];
+         
+        
       }
     },
   },
 });
-export const { addToCart } = cartSlice.actions;
+export const { addToCart, removeFromCart } = cartSlice.actions;

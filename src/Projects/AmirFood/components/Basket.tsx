@@ -3,7 +3,7 @@ import { useCartSelector } from "../hook/hook";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import RemoveOutlinedIcon from "@mui/icons-material/RemoveOutlined";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../Redux/store/slice/cartSlice";
+import { addToCart, removeFromCart } from "../Redux/store/slice/cartSlice";
 interface Props {
   onClose: () => void;
 }
@@ -15,7 +15,7 @@ export default function Basket(props: Props) {
     dispatch(addToCart({id}))
   }
   function decress(id: number) {
-    dispatch(addToCart({ id }));
+    dispatch(removeFromCart({ id }));
   }
   return (
     <dialog
@@ -49,11 +49,19 @@ export default function Basket(props: Props) {
               <AddOutlinedIcon />
             </Button>
             <span>{item.quantity}</span>
-            <Button variant="contained" color="error" sx={{ width: 2 }}>
+            <Button
+              variant="contained"
+              color="error"
+              sx={{ width: 2 }}
+              onClick={() => decress(item.id)}
+            >
               <RemoveOutlinedIcon />
             </Button>
           </div>
         ))}
+        <div زمش>
+          <p> : مجموع خرید شما </p>
+        </div>
       </div>
     </dialog>
   );
