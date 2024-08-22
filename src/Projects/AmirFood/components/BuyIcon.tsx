@@ -45,7 +45,11 @@ export default function CircularIntegration() {
           sx={buttonSx}
           onClick={handleButtonClick}
         >
-          {success ? <CheckIcon /> : <AddShoppingCartIcon />}
+          {success ? (
+            <CheckIcon sx={{ zIndex: -1 }} />
+          ) : (
+            <AddShoppingCartIcon sx={{ zIndex: -1 }} />
+          )}
         </Fab>
         {loading && (
           <CircularProgress

@@ -1,15 +1,25 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import FoodArray, {type FoodArray as CartItem } from "../../../FoodList";
+import FoodArray, { type FoodArray as CartItem } from "../../../FoodList";
 // export type CartItem = {
 //   id: number;
 //   title: string;
 //   price: number;
 // };
 type CartState = {
-  items: CartItem[];
+  items: {
+    image: string;
+    star: number;
+    title: string;
+    description: string;
+    id: number;
+    price: number;
+    quantity: number;
+  }[];
+  total: number;
 };
 const initialState: CartState = {
   items: [],
+  total: 0,
 };
 export const cartSlice = createSlice({
   name: "cart",
@@ -27,15 +37,17 @@ export const cartSlice = createSlice({
               return FoodArray[i];
             }
           }
-
         };
-        state.items.push(findItem()!);
-        // state.items.push({
-        //   id: action.payload.id,
-        //   title: "Unknown Item",
-        //   price: 0,
-        // });
-        console.log(state.items)
+        const findedItem: CartItem = findItem()!;
+        const incressItem = {
+          ...findedItem,
+          quantity: 1,
+        };
+        state.items.push(incressItem);
+      }
+      if (itemIndex >= 0) {
+        const newQuantity = state.items[itemIndex].quantity + 1;
+        state.items[itemIndex] = {...state.items[itemIndex], quantity: newQuantity };
       }
     },
   },

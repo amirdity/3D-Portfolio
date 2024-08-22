@@ -14,6 +14,7 @@ const Style = styled.div`
   align-self: center;
   justify-items: center;
 `;
+
 export default function AmirFood() {
   return (
     <Style>
