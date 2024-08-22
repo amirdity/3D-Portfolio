@@ -4,15 +4,27 @@ import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import RemoveOutlinedIcon from "@mui/icons-material/RemoveOutlined";
 import { useDispatch } from "react-redux";
 import { addToCart, removeFromCart } from "../Redux/store/slice/cartSlice";
+import { useEffect, useState } from "react";
 interface Props {
   onClose: () => void;
 }
 
 export default function Basket(props: Props) {
   const cartItems = useCartSelector((state) => state.cart.items);
-  const dispatch = useDispatch()
-  function incress(id:number){
-    dispatch(addToCart({id}))
+  const dispatch = useDispatch();
+  const [totalPrice, setTotalPrice] = useState<string>("0");
+  useEffect(() => {
+    totalPriceHandler();
+  });
+  function totalPriceHandler() {
+    let totalPrice = 0;
+    for (let i = 0; i < cartItems.length; i++) {
+      totalPrice += cartItems[i].price * cartItems[i].quantity;
+    }
+    setTotalPrice((totalPrice * 1000).toLocaleString("fa-IR"));
+  }
+  function incress(id: number) {
+    dispatch(addToCart({ id }));
   }
   function decress(id: number) {
     dispatch(removeFromCart({ id }));
@@ -59,9 +71,14 @@ export default function Basket(props: Props) {
             </Button>
           </div>
         ))}
-        <div زمش>
-          <p> : مجموع خرید شما </p>
-        </div>
+        {cartItems.length ? (
+          <div className="flex flex-row justify-around w-full" dir="rtl">
+            <p> مجموع خرید شما : </p>
+            <p className="font-bold text-[20px]"> {totalPrice} تومان</p>
+          </div>
+        ) : (
+          <p>سبد شما خالیست </p>
+        )}
       </div>
     </dialog>
   );

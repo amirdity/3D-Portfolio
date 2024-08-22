@@ -38,12 +38,21 @@ export default function MediaCard() {
               variant="h5"
               component="div"
               dir="rtl"
-              sx={{ fontWeight: 500 }}
+              sx={{ fontWeight: 500, height:50 }}
             >
               <span className="digikalaFontFamily">{food.title}</span>
             </Typography>
             <Typography variant="body2" color="text.secondary" dir="rtl">
               <span className="digikalaFontFamily">{food.description}</span>
+            </Typography>
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              dir="rtl"
+              sx={{ fontWeight: 500 }}
+            >
+              <span className="digikalaFontFamily">{(food.price * 1000).toLocaleString("fa-IR")} تومان </span>
             </Typography>
           </CardContent>
           <CardActions>
