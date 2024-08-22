@@ -3,7 +3,6 @@ import classes from "../../../components/Header/Header.module.css";
 import styles from "./style.module.css";
 import QuiltedImageList from "./ShowItem.tsx";
 import MediaCard from "./Cart";
-import styled from "styled-components";
 import { useState } from "react";
 import Basket from "./Basket.tsx";
 import BackDrop from "./Backdrop.tsx";
