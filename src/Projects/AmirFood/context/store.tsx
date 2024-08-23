@@ -1,12 +1,6 @@
 import { createContext, ReactNode, useReducer } from "react";
 
-export const AuthContext = createContext<{
-  isLoggedIn: boolean;
-  name: string;
-}>({
-  isLoggedIn: false,
-  name: "",
-});
+export const AuthContext = createContext<ContextValue | null>(null);
 interface AuthContextProvider {
   children: ReactNode;
 }
@@ -14,6 +8,10 @@ interface InitialState {
   isLoggedIn: boolean;
   name: string;
 }
+type ContextValue =InitialState & {
+  loggInHandler: (value: { value: string }) => void;
+  logoutHandler: () => void;
+};
 const initialState: InitialState = {
   isLoggedIn: false,
   name: "",
@@ -38,6 +36,7 @@ function authReducer(state: InitialState, action: Action) {
       name: "",
     };
   }
+  console.log(state)
   return initialState;
 }
 export default function AuthContextProvider({ children }: AuthContextProvider) {

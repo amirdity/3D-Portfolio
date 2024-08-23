@@ -1,14 +1,16 @@
 import { Button } from "@mui/material";
 
 import useForm from "../hook/useForm";
-import { FormEvent } from "react";
+import { FormEvent, useContext } from "react";
 import NameStyle from "./Form.styled";
+import { AuthContext } from "../context/store";
 
 interface Props {
   onClose: () => void;
 }
 
 export default function Submit(props: Props) {
+  const authCtx = useContext(AuthContext);
   const isNotEmpty = (value: string) => value.trim() !== "";
   const {
     value: nameValue,
@@ -18,13 +20,25 @@ export default function Submit(props: Props) {
     hasError: nameError,
     isValid: nameIsValid,
   } = useForm(isNotEmpty);
+  const {
+    value: familyValue,
+    valueChangHandler: familyChangeHandler,
+    blurHandler: familyBlurChangeHandler,
+    reset: resetfamily,
+    hasError: familyError,
+    isValid: familyIsValid,
+  } = useForm(isNotEmpty);
   let formIsValid = true;
   function formHandler(e: FormEvent) {
     e.preventDefault();
+    authCtx?.loggInHandler({ value: nameValue });
+
     resetName();
+    resetfamily();
+    props.onClose();
   }
 
-  if (nameIsValid) {
+  if (nameIsValid && familyIsValid) {
     formIsValid = false;
   }
   return (
@@ -59,11 +73,29 @@ export default function Submit(props: Props) {
               </p>
             )}
           </NameStyle>
+          <NameStyle error={familyError}>
+            <label htmlFor="">نام خانوادگی</label>
+            <input
+              type="text"
+              id="name"
+              onChange={familyChangeHandler}
+              onBlur={familyBlurChangeHandler}
+              value={familyValue}
+              min={3}
+              max={12}
+              required
+            />
+            {familyError && (
+              <p className="text-red-600 font-extrabold">
+                **** نام خانوادگی خود را وارد کنید ****
+              </p>
+            )}
+          </NameStyle>
 
           <Button
             variant="contained"
             color="success"
-            onClick={formHandler}
+            // onClick={formHandler}
             type="submit"
             disabled={formIsValid}
           >

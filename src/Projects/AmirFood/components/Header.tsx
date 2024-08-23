@@ -3,20 +3,25 @@ import classes from "../../../components/Header/Header.module.css";
 import styles from "./style.module.css";
 import QuiltedImageList from "./ShowItem.tsx";
 import MediaCard from "./Cart";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Basket from "./Basket.tsx";
 import BackDrop from "./Backdrop.tsx";
 import Submit from "./Submit.tsx";
+import { AuthContext } from "../context/store.tsx";
 
 export default function Header() {
   const [showCart, setShowCart] = useState(false);
   const [showSubmitForm, setShowSubmitForm] = useState(false);
-  let quantity = null;
+  const authCtx = useContext(AuthContext);
   function showCartHandler() {
     setShowCart(!showCart);
   }
   function showSubmitFormHandler() {
     setShowSubmitForm(!showSubmitForm);
+  }
+  function logoutHandler() {
+    authCtx?.logoutHandler()
+    setShowSubmitForm(false)
   }
   return (
     <header className="flex flex-col justify-around items-center mt-10 w-full max-w-[1000px] mx-auto">
@@ -41,21 +46,27 @@ export default function Header() {
           </div>
         </Typography>
         <div dir="rtl" className="gap-5 flex flex-row">
-          <Button
-            variant="contained"
-            color="success"
-            onClick={showSubmitFormHandler}
-          >
-            <span className="digikalaFontFamily text-[17px] font-[550]">
-              ورود
-            </span>
-          </Button>
-          {/* <Button variant="contained" color="error">
-            <span className="digikalaFontFamily text-[17px] font-bold">خروج</span>
-          </Button> */}
+          {!authCtx!.isLoggedIn && (
+            <Button
+              variant="contained"
+              color="success"
+              onClick={showSubmitFormHandler}
+            >
+              <span className="digikalaFontFamily text-[17px] font-[550]">
+                ورود
+              </span>
+            </Button>
+          )}
+          {authCtx!.isLoggedIn && (
+            <Button variant="contained" color="error" onClick={logoutHandler}>
+              <span className="digikalaFontFamily text-[17px] font-bold">
+                خروج
+              </span>
+            </Button>
+          )}
           <Button variant="contained" color="warning" onClick={showCartHandler}>
             <span className="digikalaFontFamily text-[17px] font-bold">
-              سبد خرید {quantity && quantity}
+              سبد خرید
             </span>
           </Button>
         </div>

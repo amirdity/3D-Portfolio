@@ -7,7 +7,6 @@ import AuthContextProvider from "./context/store";
 const Style = styled.div`
   background: rgb(238, 174, 202);
   background: radial-gradient(circle, #e43e86 0%, #700404 100%);
-  /* height:100vh ; */
   display: flex;
   flex-direction: column;
   font-family: IRANYekan, sans-serif;
@@ -20,7 +19,6 @@ export default function AmirFood() {
   return (
     <Style>
       <AuthContextProvider>
-
       <Provider store={store} children={<Header />} />
       </AuthContextProvider>
     </Style>
