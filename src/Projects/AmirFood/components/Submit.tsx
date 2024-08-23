@@ -21,7 +21,7 @@ export default function Submit(props: Props) {
   let formIsValid = true;
   function formHandler(e: FormEvent) {
     e.preventDefault();
-    resetName()
+    resetName();
   }
 
   if (nameIsValid) {
@@ -42,19 +42,24 @@ export default function Submit(props: Props) {
           dir="rtl"
         >
           <NameStyle error={nameError}>
-            <label htmlFor="">نام و نام خانوادگی</label>
+            <label htmlFor="">نام</label>
             <input
               type="text"
               id="name"
               onChange={nameChangeHandler}
               onBlur={nameBlurChangeHandler}
               value={nameValue}
-              min={6}
-              max={20}
+              min={3}
+              max={12}
               required
             />
-            {nameError && <p className="text-red-600 font-extrabold">**** نام خود را وارد کنید ****</p>}
+            {nameError && (
+              <p className="text-red-600 font-extrabold">
+                **** نام خود را وارد کنید ****
+              </p>
+            )}
           </NameStyle>
+
           <Button
             variant="contained"
             color="success"

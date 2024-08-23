@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Header from "./components/Header";
 import { Provider } from "react-redux";
 import { store } from "./Redux/store/ReduxStore";
+import AuthContextProvider from "./context/store";
 
 const Style = styled.div`
   background: rgb(238, 174, 202);
@@ -18,7 +19,10 @@ const Style = styled.div`
 export default function AmirFood() {
   return (
     <Style>
+      <AuthContextProvider>
+
       <Provider store={store} children={<Header />} />
+      </AuthContextProvider>
     </Style>
   );
 }
