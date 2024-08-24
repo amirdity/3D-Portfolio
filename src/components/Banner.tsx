@@ -84,8 +84,10 @@ const Banner = () => {
             >
               <img
                 src={linkdein}
+                loading="lazy"
                 alt="linkdein"
                 className="h-10 w-10 rounded-lg"
+                
               />
             </motion.a>
             <motion.a

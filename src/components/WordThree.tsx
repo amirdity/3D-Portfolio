@@ -22,6 +22,7 @@ const WorkThree = () => {
 
                 <img
                   src={image4}
+                  loading="lazy"
                   alt="last cv"
                   className="group-hover:scale-125 transition-all duration-500"
                 />
@@ -46,6 +47,7 @@ const WorkThree = () => {
 
                 <img
                   src={image4}
+                  loading="lazy"
                   alt="last cv"
                   className="group-hover:scale-125 transition-all duration-500"
                 />
@@ -78,6 +80,7 @@ const WorkThree = () => {
 
                 <img
                   src={image4}
+                  loading="lazy"
                   alt="last cv"
                   className="group-hover:scale-125 transition-all duration-500"
                 />
@@ -101,6 +104,7 @@ const WorkThree = () => {
 
                 <img
                   src={image4}
+                  loading="lazy"
                   alt="last cv"
                   className="group-hover:scale-125 transition-all duration-500"
                 />

@@ -35,6 +35,7 @@ const Work = () => {
 
                 <img
                   src={amirfood}
+                  loading="lazy"
                   alt="amirfood"
                   className="group-hover:scale-125 transition-all duration-500"
                 />
@@ -44,9 +45,7 @@ const Work = () => {
                 </div>
                 {/**title */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                  <span className="text-3xl text-white">
-                   MUI REDUX CONTEXT
-                  </span>
+                  <span className="text-3xl text-white">MUI REDUX CONTEXT</span>
                 </div>
               </div>
             </Link>
@@ -67,6 +66,7 @@ const Work = () => {
                 <div className="group-hover:bg-black/50 w-full h-full absolute z-40 transition-all duration-300"></div>
                 <img
                   src={image3}
+                  loading="lazy"
                   alt="last cv"
                   className="group-hover:scale-125 transition-all duration-500"
                 />
@@ -90,6 +90,7 @@ const Work = () => {
                 <div className="group-hover:bg-black/50 w-full h-full absolute z-40 transition-all duration-300"></div>
                 <img
                   src={digikala}
+                  loading="lazy"
                   alt="digikala"
                   className="group-hover:scale-125 transition-all duration-500"
                 />

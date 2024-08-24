@@ -25,6 +25,7 @@ const WorkTwo = () => {
                 <div className="group-hover:bg-black/50 w-full h-full absolute z-40 transition-all duration-300"></div>
                 <img
                   src={Timer}
+                  loading="lazy"
                   alt="last cv"
                   className="group-hover:scale-125 transition-all duration-500"
                 />
@@ -47,6 +48,7 @@ const WorkTwo = () => {
 
                 <img
                   src={image4}
+                  loading="lazy"
                   alt="last cv"
                   className="group-hover:scale-125 transition-all duration-500"
                 />
@@ -77,6 +79,7 @@ const WorkTwo = () => {
                 <div className="group-hover:bg-black/50 w-full h-full absolute z-40 transition-all duration-300"></div>
                 <img
                   src={image3}
+                  loading="lazy"
                   alt="last cv"
                   className="group-hover:scale-125 transition-all duration-500"
                 />
@@ -86,7 +89,9 @@ const WorkTwo = () => {
                 </div>
                 {/**title */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                  <span className="text-3xl text-white">STYLED-COMPONENTS TYPESCRIPT</span>
+                  <span className="text-3xl text-white">
+                    STYLED-COMPONENTS TYPESCRIPT
+                  </span>
                 </div>
               </div>
             </Link>
@@ -98,6 +103,7 @@ const WorkTwo = () => {
                 <div className="group-hover:bg-black/50 w-full h-full absolute z-40 transition-all duration-300"></div>
                 <img
                   src={image}
+                  loading="lazy"
                   alt="last cv"
                   className="group-hover:scale-125 transition-all duration-500"
                 />
