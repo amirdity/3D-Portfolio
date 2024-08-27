@@ -1,4 +1,4 @@
-import image from "../assets/MyProj/last-cv.webp";
+import jingil from "../assets/MyProj/jingil.webp";
 import image3 from "../assets/MyProj/Expense-chart.webp";
 import Timer from "../assets/MyProj/timer-sypescript.webp"
 import image4 from "../assets/MyProj/goal-typescript.webp";
@@ -96,26 +96,26 @@ const WorkTwo = () => {
               </div>
             </Link>
 
-            <a href="https://amirfattahi.ir/last-cv/index.html">
+            <a href="https://jingil-nextjs.vercel.app/">
               {" "}
               <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
                 {/**over lay */}
                 <div className="group-hover:bg-black/50 w-full h-full absolute z-40 transition-all duration-300"></div>
                 <img
-                  src={image}
+                  src={jingil}
                   loading="lazy"
                   alt="last cv"
                   className="group-hover:scale-125 transition-all duration-500"
                 />
                 {/**pretty */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50   ">
-                  <span className="text-gradient">Bootstrap</span>{" "}
+                  <span className="text-gradient">
+                    "SHOP ➡ (TURN VPN ON )"
+                  </span>{" "}
                 </div>
                 {/**title */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                  <span className="text-3xl text-white">
-                    This Project Made by Bootstrap
-                  </span>
+                  <span className="text-3xl text-white">NEXTJS TAILWIND</span>
                 </div>
               </div>
             </a>

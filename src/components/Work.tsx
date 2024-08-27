@@ -1,5 +1,5 @@
 import digikala from "../assets/MyProj/digikala.webp";
-import image3 from "../assets/MyProj/jingil.webp";
+import fastFood from "../assets/MyProj/fast-food.webp";
 import amirfood from "../assets/MyProj/amirfood.webp";
 import { motion } from "framer-motion";
 import { fadeIn } from "../varients";
@@ -59,13 +59,13 @@ const Work = () => {
           >
             {/**image */}
 
-            <a href="https://jingil-nextjs.vercel.app/">
+            <a href="https://fastfood-next-typescript.vercel.app/">
               {" "}
               <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
                 {/**over lay */}
                 <div className="group-hover:bg-black/50 w-full h-full absolute z-40 transition-all duration-300"></div>
                 <img
-                  src={image3}
+                  src={fastFood}
                   loading="lazy"
                   alt="last cv"
                   className="group-hover:scale-125 transition-all duration-500"
@@ -73,7 +73,7 @@ const Work = () => {
                 {/**pretty */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50   ">
                   <span className="text-gradient">
-                    "SHOP ➡ (TURN VPN ON )"
+                    "FAST FOOD ➡ (TURN VPN ON )"
                   </span>{" "}
                 </div>
                 {/**title */}

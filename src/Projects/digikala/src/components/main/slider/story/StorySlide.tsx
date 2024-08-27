@@ -118,6 +118,14 @@ function StorySlide() {
           spaceBetween={1}
           navigation={true}
           breakpoints={{
+            300: {
+              slidesPerView: 4,
+              spaceBetween: 5,
+            },
+            400: {
+              slidesPerView: 4,
+              spaceBetween: 5,
+            },
             500: {
               slidesPerView: 5,
               spaceBetween: 5,
@@ -145,17 +153,14 @@ function StorySlide() {
                   className={`"rounded-full items-center justify-center flex w-[80px] h-[80px] ${classes.story} mt-2"`}
                 >
                   <div className="rounded-full bg-white">
-
-                  <img
-                    src={slide.src}
-                    alt={slide.alt}
-                    className="rounded-full w-[74px] h-[74px] p-1"
+                    <img
+                      src={slide.src}
+                      alt={slide.alt}
+                      className="rounded-full w-[74px] h-[74px] p-1"
                     />
-                    </div>
+                  </div>
                 </div>
-                <p
-                  className={`"w-[84px] h-[48px] ${classes["story-text"]} "`}
-                >
+                <p className={`"w-[84px] h-[48px] ${classes["story-text"]} "`}>
                   {slide.alt}
                 </p>
               </div>

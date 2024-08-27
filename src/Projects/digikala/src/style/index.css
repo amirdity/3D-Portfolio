@@ -43,6 +43,7 @@
   outline: none;
   margin: 0;
   padding: 0;
+  text-overflow: ellipsis;
 }
 .digikalaFontFamily{
   font-family: IRANYekan, sans-serif;
