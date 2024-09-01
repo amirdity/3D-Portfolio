@@ -10,6 +10,7 @@ import TimerTypeScript from "./Projects/Timer-typescript/TimerTypeScript";
 import ChartbarExpenseTypescript from "./Projects/Chartbar-expense-typescript/ChartbarExpenseTypescript";
 import Layout from "./Projects/digikala/src/layout/Layout";
 import AmirFood from "./Projects/AmirFood/AmirFood";
+import AdminPanel from "./Projects/Admin-panel/AdminPanel";
 const route = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/">
@@ -25,6 +26,7 @@ const route = createBrowserRouter(
         path="/chartbar-expense-typescript"
         element={<ChartbarExpenseTypescript />}
       />
+      <Route path="/admin" element={<AdminPanel />} />
     </Route>
   )
 );
