@@ -63,15 +63,15 @@ export default function Sidebar() {
       {/* menu */}
       <div className="menu">
         {SidebarData.map((item, index) => (
-          <div className="menuItem">
-            <div>icon</div>
-            <span>dashbord</span>
+          <div className="menuItem" key={index}>
+            <div>
+              <img src={item.icon} alt={item.heading} width={24} height={24}/>
+            </div>
+            <span>{item.heading}</span>
           </div>
         ))}
         <div className="menuItem">
-          <div>
-            icon
-          </div>
+          <div>icon</div>
           <span>dashbord</span>
         </div>
       </div>
