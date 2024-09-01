@@ -1,42 +1,39 @@
 // Sidebar imports
-import {
-  UilEstate,
-  UilClipboardAlt,
-  UilUsersAlt,
-  UilPackage,
-  UilChart,
-  UilSignOutAlt,
-} from "@iconscout/react-unicons";
+import Dashboard from "../asset/home.svg"
+import Orders from "../asset/order.svg";
+import Customers from "../asset/customer.svg";
+import Products from "../asset/products.svg";
+import Analytics from "../asset/analytics.svg";
 
 // Analytics Cards imports
-import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
+// import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
 // import { keyboard } from "@testing-library/user-event/dist/keyboard";
 
 // Recent Card Imports
-import img1 from "../imgs/img1.png";
-import img2 from "../imgs/img2.png";
-import img3 from "../imgs/img3.png";
+import img1 from "../asset/img1.png";
+import img2 from "../asset/img2.png";
+import img3 from "../asset/img3.png";
 
 // Sidebar Data
 export const SidebarData = [
   {
-    icon: UilEstate,
+    icon: Dashboard,
     heading: "Dashboard",
   },
   {
-    icon: UilClipboardAlt,
+    icon: Orders,
     heading: "Orders",
   },
   {
-    icon: UilUsersAlt,
+    icon: Customers,
     heading: "Customers",
   },
   {
-    icon: UilPackage,
+    icon: Products,
     heading: "Products",
   },
   {
-    icon: UilChart,
+    icon: Analytics,
     heading: "Analytics",
   },
 ];
@@ -51,7 +48,7 @@ export const cardsData = [
     },
     barValue: 70,
     value: "25,970",
-    png: UilUsdSquare,
+    // png: UilUsdSquare,
     series: [
       {
         name: "Sales",
@@ -67,7 +64,7 @@ export const cardsData = [
     },
     barValue: 80,
     value: "14,270",
-    png: UilMoneyWithdrawal,
+    // png: UilMoneyWithdrawal,
     series: [
       {
         name: "Revenue",
@@ -84,7 +81,7 @@ export const cardsData = [
     },
     barValue: 60,
     value: "4,270",
-    png: UilClipboardAlt,
+    // png: UilClipboardAlt,
     series: [
       {
         name: "Expenses",

@@ -62,12 +62,12 @@ export default function Sidebar() {
       </div>
       {/* menu */}
       <div className="menu">
-        {/* {SidebarData.map((item, index) => (
+        {SidebarData.map((item, index) => (
           <div className="menuItem">
             <div>icon</div>
             <span>dashbord</span>
           </div>
-        ))} */}
+        ))}
         <div className="menuItem">
           <div>
             icon
