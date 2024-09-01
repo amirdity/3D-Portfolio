@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import logo from "../../asset/logo.png";
 import { SidebarData } from "../../Data/Data";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const SidebarStyle = styled.div`
   display: flex;
   flex-direction: column;
@@ -70,7 +70,7 @@ export default function Sidebar() {
         ))} */}
         <div className="menuItem">
           <div>
-            <FontAwesomeIcon icon="fa-sharp-duotone fa-solid fa-house" />
+            icon
           </div>
           <span>dashbord</span>
         </div>
