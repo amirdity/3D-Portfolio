@@ -33,11 +33,36 @@ const SIDEBAR_ITEMS: Sidebar = [
     color: "#8B5CF6",
     href: "/adminDashbord/products",
   },
-  { name: "Users", icon: Users, color: "#EC4899", href: "/adminDashbord/users" },
-  { name: "Sales", icon: DollarSign, color: "#10B981", href: "/adminDashbord/sales" },
-  { name: "Orders", icon: ShoppingCart, color: "#F59E0B", href: "/adminDashbord/orders" },
-  { name: "Analytics", icon: TrendingUp, color: "#3B82F6", href: "/adminDashbord/analytics" },
-  { name: "Settings", icon: Settings, color: "#6EE7B7", href: "/adminDashbord/settings" },
+  {
+    name: "Users",
+    icon: Users,
+    color: "#EC4899",
+    href: "/adminDashbord/users",
+  },
+  {
+    name: "Sales",
+    icon: DollarSign,
+    color: "#10B981",
+    href: "/adminDashbord/sales",
+  },
+  {
+    name: "Orders",
+    icon: ShoppingCart,
+    color: "#F59E0B",
+    href: "/adminDashbord/orders",
+  },
+  {
+    name: "Analytics",
+    icon: TrendingUp,
+    color: "#3B82F6",
+    href: "/adminDashbord/analytics",
+  },
+  {
+    name: "Settings",
+    icon: Settings,
+    color: "#6EE7B7",
+    href: "/adminDashbord/settings",
+  },
 ];
 
 const Sidebar = () => {

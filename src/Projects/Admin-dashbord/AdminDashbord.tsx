@@ -9,7 +9,6 @@ export default function AdminDashbord() {
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 opacity-80" />
         <div className="absolute inset-0 backdrop-blur-sm" />
       </div>
-      hello
       <Sidebar />
       <Outlet />
     </div>
