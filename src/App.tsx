@@ -37,12 +37,12 @@ const route = createBrowserRouter(
       <Route path="/admin" element={<AdminPanel />} />
       <Route path="/adminDashbord" element={<AdminDashbord />}>
         <Route index element={<OverviewPage />} />
-        <Route path="/products" element={<ProductsPage />} />
-        <Route path="/users" element={<UsersPage />} />
-        <Route path="/sales" element={<SalesPage />} />
-        <Route path="/orders" element={<OrdersPage />} />
-        <Route path="/analytics" element={<AnalyticsPage />} />
-        <Route path="/settings" element={<SettingsPage />} />
+        <Route path="products" element={<ProductsPage />} />
+        <Route path="users" element={<UsersPage />} />
+        <Route path="sales" element={<SalesPage />} />
+        <Route path="orders" element={<OrdersPage />} />
+        <Route path="analytics" element={<AnalyticsPage />} />
+        <Route path="settings" element={<SettingsPage />} />
       </Route>
     </Route>
   )
