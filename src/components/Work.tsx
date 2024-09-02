@@ -1,6 +1,6 @@
 import digikala from "../assets/MyProj/digikala.webp";
 import fastFood from "../assets/MyProj/fast-food.webp";
-import amirfood from "../assets/MyProj/amirfood.webp";
+import Admindashbord from "../assets/MyProj/admin-dashboard.webp"
 import { motion } from "framer-motion";
 import { fadeIn } from "../varients";
 import { Link } from "react-router-dom";
@@ -28,24 +28,26 @@ const Work = () => {
             </div>
             {/**image */}
 
-            <Link to="/amir-food">
+            <Link to="/adminDashbord">
               <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
                 {/**over lay */}
                 <div className="group-hover:bg-black/50 w-full h-full absolute z-40 transition-all duration-300"></div>
 
                 <img
-                  src={amirfood}
+                  src={Admindashbord}
                   loading="lazy"
-                  alt="amirfood"
+                  alt="dashboard"
                   className="group-hover:scale-125 transition-all duration-500"
                 />
                 {/**pretty */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50   ">
-                  <span className="text-gradient">AMIR FOOD</span>{" "}
+                  <span className="text-gradient">Admin Panel</span>{" "}
                 </div>
                 {/**title */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                  <span className="text-3xl text-white">MUI REDUX CONTEXT</span>
+                  <span className="text-3xl text-white">
+                    Tailwind motion chart
+                  </span>
                 </div>
               </div>
             </Link>
