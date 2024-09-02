@@ -1,4 +1,5 @@
 import "./adminPanel.scss"
+import MainDash from "./components/MainDash/MainDash";
 import Sidebar from "./components/Sidebar/Sidebar";
 
 export default function AdminPanel() {
@@ -6,7 +7,7 @@ export default function AdminPanel() {
     <div className="adminPanelChart">
       <div className="AppGlass">
         <Sidebar />
-        <div></div>
+        <MainDash/>
         <div></div>
       </div>
       

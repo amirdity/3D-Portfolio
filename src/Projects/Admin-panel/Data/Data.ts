@@ -4,7 +4,7 @@ import Orders from "../asset/order.svg";
 import Customers from "../asset/customer.svg";
 import Products from "../asset/products.svg";
 import Analytics from "../asset/analytics.svg";
-
+import logout from "../asset/logout.svg"
 // Analytics Cards imports
 // import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
 // import { keyboard } from "@testing-library/user-event/dist/keyboard";
@@ -35,6 +35,10 @@ export const SidebarData = [
   {
     icon: Analytics,
     heading: "Analytics",
+  },
+  {
+    icon: logout,
+    heading: "logout",
   },
 ];
 

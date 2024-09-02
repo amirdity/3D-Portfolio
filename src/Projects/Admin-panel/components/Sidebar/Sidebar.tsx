@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import logo from "../../asset/logo.png";
 import { SidebarData } from "../../Data/Data";
+import { useState } from "react";
 
 const SidebarStyle = styled.div`
   display: flex;
@@ -44,13 +45,25 @@ const SidebarStyle = styled.div`
     cursor: pointer;
   }
 
-  /* & .menuItem:last-child {
+  & .menuItem:last-child {
     position: absolute;
     bottom: 2.3rem;
     width: 100%;
-  } */
+  }
+  & .active {
+    background: #f799a354;
+    margin-left: 0;
+  }
+  & .active::before {
+    content: "";
+    width: 5px;
+    height: 30px;
+    background: #ff919d;
+    /* margin-right: calc(1rem - 8px); */
+  }
 `;
 export default function Sidebar() {
+  const [selected, setSelected] = useState(0)
   return (
     <SidebarStyle>
       {/* logo */}
@@ -63,17 +76,17 @@ export default function Sidebar() {
       {/* menu */}
       <div className="menu">
         {SidebarData.map((item, index) => (
-          <div className="menuItem" key={index}>
+          <div
+            className={selected === index ? "menuItem active" : "menuItem"}
+            key={index}
+            onClick={() => setSelected(index)}
+          >
             <div>
-              <img src={item.icon} alt={item.heading} width={24} height={24}/>
+              <img src={item.icon} alt={item.heading} width={50} height={50} />
             </div>
             <span>{item.heading}</span>
           </div>
         ))}
-        <div className="menuItem">
-          <div>icon</div>
-          <span>dashbord</span>
-        </div>
       </div>
     </SidebarStyle>
   );
