@@ -21,6 +21,7 @@ import SalesPage from "./Projects/Admin-dashbord/page/SalesPage";
 import OrdersPage from "./Projects/Admin-dashbord/page/OrdersPage";
 import AnalyticsPage from "./Projects/Admin-dashbord/page/AnalyticsPage";
 import SettingsPage from "./Projects/Admin-dashbord/page/SettingsPage";
+import SocialClub from "./Projects/social-club/SocialClub";
 // const route = createBrowserRouter(
 //   createRoutesFromElements(
 //     <>
@@ -59,7 +60,7 @@ function App() {
       <Routes>
         <Route path="/">
           <Route index element={<Homepage />} />
-          <Route path="*" element={<Homepage />} />
+          {/* <Route path="*" element={<Homepage />} /> */}
           <Route path="/goal-typescript" element={<GoalTypeScript />} />
           <Route path="/digikala" element={<Layout />} />
           <Route path="*/digikala" element={<Layout />} />
@@ -71,6 +72,7 @@ function App() {
             element={<ChartbarExpenseTypescript />}
           />
           <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/social-club" element={<SocialClub />} />
           <Route path="/adminDashbord" element={<AdminDashbord />}>
             <Route index element={<OverviewPage />} />
             <Route path="products" element={<ProductsPage />} />
@@ -82,7 +84,6 @@ function App() {
           </Route>
           {/* <Route element={<Homepage />} /> */}
         </Route>
-        {/* <Route path="*" element={<Homepage />} /> */}
       </Routes>
     </HashRouter>
   );

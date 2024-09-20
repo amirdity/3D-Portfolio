@@ -1,5 +1,5 @@
 import jingil from "../assets/MyProj/jingil.webp";
-import image3 from "../assets/MyProj/Expense-chart.webp";
+import image3 from "../assets/MyProj/social-club.webp";
 import image4 from "../assets/MyProj/goal-typescript.webp";
 import { motion } from "framer-motion";
 import { fadeIn } from "../varients";
@@ -73,7 +73,7 @@ const WorkTwo = () => {
           >
             {/**image */}
 
-            <Link to="/chartbar-expense-typescript">
+            <Link to="/social-club">
               {" "}
               <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
                 {/**over lay */}
@@ -86,12 +86,12 @@ const WorkTwo = () => {
                 />
                 {/**pretty */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50   ">
-                  <span className="text-gradient">"Expense Chart"</span>{" "}
+                  <span className="text-gradient">"Social club"</span>{" "}
                 </div>
                 {/**title */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
                   <span className="text-3xl text-white">
-                    STYLED-COMPONENTS TYPESCRIPT
+                    MUI TYPESCRIPT
                   </span>
                 </div>
               </div>
